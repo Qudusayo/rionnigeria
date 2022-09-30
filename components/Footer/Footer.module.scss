@@ -1,0 +1,56 @@
+@import "./../../styles/scss/variable";
+
+.Footer {
+  padding: 4em 0;
+  &Data {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1.2fr;
+    margin: auto;
+    width: 90%;
+
+    div {
+      font-family: $Gilroy;
+      font-size: 0.9em;
+      h2,
+      ul,
+      p {
+        margin: 0;
+      }
+
+      h2 {
+        font-size: 1.25em;
+        font-weight: 600;
+      }
+
+      ul {
+        li {
+          margin: 0.75em 0;
+        }
+      }
+      
+      &:nth-of-type(1) {
+        p{
+          width: 80%;
+          margin-top: 2em;
+          line-height: 1.25;
+        }
+      }
+      
+      .FooterIcon{
+        margin: 0.75em;
+
+        &:nth-of-type(1){
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  &CopyRight {
+    display: block;
+    text-align: center;
+    color: $txtNeutral;
+    font-size: 0.9em;
+    margin: 5em auto 0;
+  }
+}

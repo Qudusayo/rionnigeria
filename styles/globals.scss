@@ -15,7 +15,27 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
+button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+ul {
+  padding-inline-start: 0;
+
+  li {
+    list-style-type: none;
+    color: #16191C;
+  }
+}
+
+img{
+  max-width: 100%;
+  object-fit: cover;
+}
+
+/* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
@@ -23,4 +43,4 @@ a {
     color: white;
     background: black;
   }
-}
+} */
