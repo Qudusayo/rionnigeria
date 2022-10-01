@@ -15,9 +15,9 @@ export default function About() {
       <div className={styles.InfoContent}>
         <div className={styles.InfoContentSector}>
           <div>
-            <h2>Dua' Circus/ Ramadan Iftar</h2>
+            <h2>Dua&apos; Circus/ Ramadan Iftar</h2>
             <p>
-              Du'a Circus are members who voluntarily committed to join Muslims,
+              Dua&apos; Circus are members who voluntarily committed to join Muslims,
               members and non-members alike in their supplication at anytime and
               anywhere. Ramadan Iftar is a mean of family dawah and brotherhood
               bond fortifier, as willing members show their interest to host
@@ -86,19 +86,19 @@ export default function About() {
             <h2>Weekly Tahalim</h2>
             <p>
               Mainly lecture for adults delivered by capable members of the
-              group every yaom A'had (Sunday) at the centre. We teach every
+              group every yaom A&apos;had (Sunday) at the centre. We teach every
               aspects of Islamic life as scheduled.
             </p>
           </div>
           <div>
             <h2>Monthly Guest Lecture (MGL)</h2>
             <p>
-              Comes up every last yaom A'had (Sunday) of the month. Notable
+              Comes up every last yaom A&apos;had (Sunday) of the month. Notable
               Imams/Islamic scholars are invited to deliver lecture on a
               specific issue in Islam in the local language. It used to be tape
               recorded and copies are sold to interested Muslims. Over 190
               lectures have been recorded. The summary of these are presented as
-              'Monthly Guest Message'
+              &apos;Monthly Guest Message&apos;
             </p>
           </div>
           <div>

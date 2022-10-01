@@ -22,7 +22,7 @@ export default function About() {
               organization in the area where it sprang. And it focus has been
               how to acquaint Muslims with fundamentals of their religion
               through various forms of dawah, directing them to the part of
-              unity in the faith and denouncing them from bid'a and providing
+              unity in the faith and denouncing them from bid&apos;a and providing
               them with best argument against the assaults of unbelievers among
               others.
             </p>
@@ -66,11 +66,11 @@ export default function About() {
             <h2>Aims and Objectives</h2>
             <p>
               To let all mankind be well understood that “There is no Deity
-              worthy of worship except Allah Ta'ala".
+              worthy of worship except Allah Ta&apos;ala".
               <br />
               To promote and propagate the only true religion - Islam in all its
               ramifications. To inspire unity and inculcate the message of the
-              Holy Qur'an and the Hadith of the Prophet Muhammed (S.A.W.) into
+              Holy Qur&apos;an and the Hadith of the Prophet Muhammed (S.A.W.) into
               all mankind especially Muslims. To cater for and enhance the
               health, educational, economic, moral and spiritual needs of Muslim
               faithful with workshops, conferences, films strip and whatever is

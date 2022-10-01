@@ -12,7 +12,7 @@ export default function Subscribe() {
   return (
     <div className={styles.Subscribe}>
       <div className={styles.SubscribeHeader}>
-        <h2>Subcribe so you don't Miss Anything</h2>
+        <h2>Subcribe so you don&apos;t Miss Anything</h2>
         <span>
           By Becoming a member of our email list, You will be the first hear
           about a news
@@ -25,8 +25,16 @@ export default function Subscribe() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-        <button type="submit">Subscribe</button>
+        <Button title="Subscribe" />
       </form>
     </div>
+  );
+}
+
+export function Button({ title, value, onClick }) {
+  return (
+    <button className={styles.Button} type="submit">
+      {title}
+    </button>
   );
 }
