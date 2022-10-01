@@ -36,15 +36,15 @@
       margin: 0.5em 0 0.75em;
       font-family: $ClashDisplay;
     }
-
-    button {
-      outline: none;
-      border: none;
-      border-radius: 5px;
-      color: $white;
-      background-color: $btnPrimary;
-      height: 45px;
-      padding: 0 3em;
-    }
   }
+}
+
+.Button {
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  color: $white;
+  background-color: $btnPrimary;
+  height: 45px;
+  padding: 0 3em;
 }
