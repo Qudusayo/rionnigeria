@@ -65,8 +65,8 @@ export default function About() {
           <div>
             <h2>Aims and Objectives</h2>
             <p>
-              To let all mankind be well understood that “There is no Deity
-              worthy of worship except Allah Ta&apos;ala".
+              To let all mankind be well understood that &ldquo;There is no Deity
+              worthy of worship except Allah Ta&apos;ala&rdquo;.
               <br />
               To promote and propagate the only true religion - Islam in all its
               ramifications. To inspire unity and inculcate the message of the
