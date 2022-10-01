@@ -8,6 +8,9 @@
     display: flex;
     align-items: center;
     gap: 5em;
+    position: relative;
+    top: -9em;
+    margin-bottom: -8em;
 
     &Info,
     &Form {
