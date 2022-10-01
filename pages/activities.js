@@ -1,9 +1,15 @@
+import CommonHero from "../components/CommonHero/CommonHero";
 import styles from "./../styles/Info.module.scss";
 import { AppreciationCard } from "./about";
 
 export default function About() {
   return (
     <div className={styles.Info}>
+      <CommonHero
+        title="Activity"
+        info="Get to know more about what we do"
+        bg="/bg/activities-bg.jpeg"
+      />
       <div className={styles.ActivityCard}>
         Programme of activities of the Organization is designed to aid and
         protect the belief, morals, welfare and Islamic consciousness of Muslim
@@ -17,13 +23,13 @@ export default function About() {
           <div>
             <h2>Dua&apos; Circus/ Ramadan Iftar</h2>
             <p>
-              Dua&apos; Circus are members who voluntarily committed to join Muslims,
-              members and non-members alike in their supplication at anytime and
-              anywhere. Ramadan Iftar is a mean of family dawah and brotherhood
-              bond fortifier, as willing members show their interest to host
-              other members for a day iftar during Ramadan. Hosting family is
-              attended to by conducting dua/ashkar; deliver short sermon and
-              breaking the fast of the day with whatever is offered.
+              Dua&apos; Circus are members who voluntarily committed to join
+              Muslims, members and non-members alike in their supplication at
+              anytime and anywhere. Ramadan Iftar is a mean of family dawah and
+              brotherhood bond fortifier, as willing members show their interest
+              to host other members for a day iftar during Ramadan. Hosting
+              family is attended to by conducting dua/ashkar; deliver short
+              sermon and breaking the fast of the day with whatever is offered.
             </p>
           </div>
           <div>

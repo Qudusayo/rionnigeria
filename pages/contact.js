@@ -1,4 +1,5 @@
 import { FiMail, FiMapPin, FiPhone } from "react-icons/fi";
+import CommonHero from "../components/CommonHero/CommonHero";
 import { Button } from "../components/Subscribe/Subscribe";
 
 import styles from "./../styles/Contact.module.scss";
@@ -6,6 +7,11 @@ import styles from "./../styles/Contact.module.scss";
 export default function Contact() {
   return (
     <div className={styles.Contact}>
+      <CommonHero
+        title="Contact Us"
+        info="Get in touch with us"
+        bg="/bg/contact-bg.jpeg"
+      />
       <div className={styles.ContactContent}>
         <div className={styles.ContactContentInfo}>
           <h2>Risalatul Islamiyyat Organization of Nigeria</h2>
