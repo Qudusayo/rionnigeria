@@ -1,8 +1,14 @@
+import Navbar from "../components/Navbar/Navbar";
+import Slider from "../components/Slider/Slider";
 import styles from "./../styles/Index.module.scss";
 
 export default function Home() {
   return (
     <div className={styles.Home}>
+      <div>
+        <Navbar type={"solid"} />
+        <Slider />
+      </div>
       <div className={styles.HomeContent}>
         <div className={styles.HomeContentSector}>
           <h2 className={styles.HomeContentSectorTitle}>Posers</h2>

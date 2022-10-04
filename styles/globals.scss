@@ -33,6 +33,11 @@ h6 {
 
 p {
   line-height: 1.35;
+
+  &::selection {
+    background-color: #46b96c;
+    color: #ffffff;
+  }
 }
 
 button {

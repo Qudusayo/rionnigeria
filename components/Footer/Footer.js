@@ -1,4 +1,5 @@
 import { RiFacebookCircleFill, RiTwitterFill } from "react-icons/ri";
+import Link from "next/link";
 import styles from "./Footer.module.scss";
 
 export default function Footer() {
@@ -17,23 +18,47 @@ export default function Footer() {
         <div>
           <h2>About</h2>
           <ul>
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Activities</li>
-            <li>Contact</li>
-            <li>Publications</li>
+            <li>
+              <Link href="/">Home</Link>
+            </li>
+            <li>
+              <Link href="/about">About Us</Link>
+            </li>
+            <li>
+              <Link href="/activities">Activities</Link>
+            </li>
+            <li>
+              <Link href="/contact">Contact</Link>
+            </li>
+            <li>
+              <Link href="/publications">Publications</Link>
+            </li>
           </ul>
         </div>
         <div>
           <h2>Links</h2>
           <ul>
-            <li>Monthly Messages</li>
-            <li>Posers</li>
-            <li>Analysis</li>
-            <li>Q &amp; A</li>
-            <li>Rebutals</li>
-            <li>Travails of revertees</li>
-            <li>Contact</li>
+            <li>
+              <Link href="/monthly-message">Monthly Messages</Link>
+            </li>
+            <li>
+              <Link href="/posers">Posers</Link>
+            </li>
+            <li>
+              <Link href="/analysis">Analysis</Link>
+            </li>
+            <li>
+              <Link href="/q-&-a">Q &amp; A</Link>
+            </li>
+            <li>
+              <Link href="/rebutals">Rebutals</Link>
+            </li>
+            <li>
+              <Link href="/travails">Travails of revertees</Link>
+            </li>
+            <li>
+              <Link href="/contact">Contact</Link>
+            </li>
           </ul>
         </div>
         <div>
@@ -45,16 +70,28 @@ export default function Footer() {
         </div>
         <div>
           <h2>Socials</h2>
-          <RiTwitterFill
-            size={30}
-            fill="#98A2B3"
-            className={styles.FooterIcon}
-          />
-          <RiFacebookCircleFill
-            size={30}
-            fill="#98A2B3"
-            className={styles.FooterIcon}
-          />
+          <a
+            href="https://twitter.com/rionnigeria"
+            target="_blank"
+            rel="noopener"
+          >
+            <RiTwitterFill
+              size={30}
+              fill="#98A2B3"
+              className={styles.FooterIcon}
+            />
+          </a>
+          <a
+            href="https://web.facebook.com/rionnigeriahq"
+            target="_blank"
+            rel="noopener"
+          >
+            <RiFacebookCircleFill
+              size={30}
+              fill="#98A2B3"
+              className={styles.FooterIcon}
+            />
+          </a>
         </div>
       </div>
       <span className={styles.FooterCopyRight}>

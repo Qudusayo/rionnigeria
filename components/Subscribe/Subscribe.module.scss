@@ -3,11 +3,17 @@
 .Subscribe {
   font-family: $Gilroy;
   background-color: $primaryColor;
-  color: $white;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   padding: 4em 6em;
+
+  &Content {
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    width: 90%;
+    max-width: 1440px;
+  }
 
   &Header {
     flex: 2;
