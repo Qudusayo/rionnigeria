@@ -73,7 +73,7 @@ export default function Footer() {
           <a
             href="https://twitter.com/rionnigeria"
             target="_blank"
-            rel="noopener"
+            rel="noreferrer"
           >
             <RiTwitterFill
               size={30}
@@ -84,7 +84,7 @@ export default function Footer() {
           <a
             href="https://web.facebook.com/rionnigeriahq"
             target="_blank"
-            rel="noopener"
+            rel="noreferrer"
           >
             <RiFacebookCircleFill
               size={30}

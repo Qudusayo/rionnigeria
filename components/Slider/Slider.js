@@ -34,7 +34,7 @@ export default function Slider() {
             <div className="slide-content">
               <h2>The Library Mosque</h2>
               <p>
-                Determined to ensure Superman's ultimate sacrifice was not in
+                Determined to ensure Superman&#39;s ultimate sacrifice was not in
                 vain, Bruce Wayne aligns forces with Diana Prince with plans to
                 recruit a team of metahumans to protect the world from an
                 approaching threat of catastrophic proportions.
