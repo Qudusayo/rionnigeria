@@ -1,0 +1,21 @@
+@import "./scss/variable";
+@import "./scss/prev_noimg";
+
+.Posers {
+  &Sector {
+    &Title {
+      margin-top: 1em;
+      font-size: 2em;
+    }
+
+    &Info {
+      width: 80%;
+    }
+
+    &Content {
+      &Main {
+        margin: 4em 0;
+      }
+    }
+  }
+}

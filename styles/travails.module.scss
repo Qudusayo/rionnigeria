@@ -1,0 +1,19 @@
+@import "./scss/variable";
+@import "./scss/prev_image";
+
+.Travails {
+  &Sector {
+    &Title {
+      margin-top: 1em;
+      font-size: 2em;
+    }
+
+    &Info {
+      width: 75.5%;
+    }
+
+    &Content {
+      margin: 4em 0;
+    }
+  }
+}

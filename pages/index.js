@@ -37,8 +37,8 @@ export default function Home() {
         </div>
         <div className={styles.HomeContentSector}>
           <h2 className={styles.HomeContentSectorTitle}>Travails of Reverts</h2>
-          <div className={styles.TravailsSector}>
-            <div className={styles.TravailsSectorMain}>
+          <div className={styles.FlexImageColumn}>
+            <div className={styles.FlexImageColumnMain}>
               <Card
                 imageUrl="https://www.arabianbusiness.com/cloud/2022/07/18/dubai-skyline.jpg"
                 title="10 Places you can visit after your hajj"
@@ -49,7 +49,7 @@ export default function Home() {
                 }
               />
             </div>
-            <div className={styles.TravailsSectorSection}>
+            <div className={styles.FlexImageColumnSection}>
               <Card
                 type="flex-left-sm"
                 imageUrl="https://www.arabianbusiness.com/cloud/2022/07/18/dubai-skyline.jpg"
@@ -77,8 +77,8 @@ export default function Home() {
 
         <div className={styles.HomeContentSector}>
           <h2 className={styles.HomeContentSectorTitle}>Analysis</h2>
-          <div className={styles.AnalysisSector}>
-            <div className={styles.AnalysisSectorMain}>
+          <div className={styles.GridFiveLayer}>
+            <div className={styles.GridFiveLayerMain}>
               <Card
                 imageUrl="https://www.arabianbusiness.com/cloud/2022/07/18/dubai-skyline.jpg"
                 title="10 Places you can visit after your hajj"
@@ -86,7 +86,7 @@ export default function Home() {
                 summary="Bibendum lectus vitae, pharetra enim. Odio aenean est eget lectus duis etiam sem in. Lorem tincidunt elit sed odio. At scelerisque in sapien velit libero. Posuere tellus laoreet elementum ac eget. Arcu facilisis velit, dui volutpat amet, consectetur augue sed mauris. Ipsum libero mauris malesuada quis ornare tortor lorem."
               />
             </div>
-            <div className={styles.AnalysisSectorSection}>
+            <div className={styles.GridFiveLayerSection}>
               <Card
                 imageUrl="https://www.arabianbusiness.com/cloud/2022/07/18/dubai-skyline.jpg"
                 title="10 Places you can visit after your hajj"
@@ -118,8 +118,8 @@ export default function Home() {
 
         <div className={styles.HomeContentSector}>
           <h2 className={styles.HomeContentSectorTitle}>Rebutals</h2>
-          <div className={styles.RebutalsSector}>
-            <div className={styles.RebutalsSectorMain}>
+          <div className={styles.FlexLeftNoImgCard}>
+            <div className={styles.FlexLeftNoImgCardMain}>
               <Card
                 imageUrl="https://www.arabianbusiness.com/cloud/2022/07/18/dubai-skyline.jpg"
                 title="10 Places you can visit after your hajj"
@@ -130,7 +130,7 @@ export default function Home() {
                 }
               />
             </div>
-            <div className={styles.RebutalsSectorExtra}>
+            <div className={styles.FlexLeftNoImgCardExtra}>
               <Card
                 className={styles.rCard}
                 title="10 Places you can visit after your hajj"
@@ -222,7 +222,7 @@ export default function Home() {
   );
 }
 
-function Card({ imageUrl, title, date, summary, type, className }) {
+export function Card({ imageUrl, title, date, summary, type, className }) {
   return (
     <div
       className={[

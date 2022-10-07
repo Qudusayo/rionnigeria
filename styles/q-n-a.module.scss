@@ -1,0 +1,24 @@
+@import "./scss/variable";
+@import "./scss/card_mixin";
+
+.QnA {
+  &Sector {
+    width: 80%;
+    margin: 4em auto;
+
+    &Title {
+      font-size: 2em;
+    }
+
+    &Info {
+      width: 80%;
+    }
+
+    &Cards {
+      margin-top: 4em;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1em;
+    }
+  }
+}

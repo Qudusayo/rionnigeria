@@ -1,0 +1,19 @@
+@import "./scss/variable";
+@import "./scss/grid_five";
+
+.Analysis {
+  &Sector {
+    &Title {
+      margin-top: 1em;
+      font-size: 2em;
+    }
+
+    &Info {
+      width: 80%;
+    }
+
+    &Content {
+      margin: 4em 0;
+    }
+  }
+}

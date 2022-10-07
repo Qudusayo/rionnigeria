@@ -1,0 +1,18 @@
+.FlexLeftNoImgCard {
+  display: flex;
+  gap: 2em;
+
+  &Main {
+    flex: 2;
+  }
+
+  &Extra {
+    border-top: 1px solid $txtNeutral;
+    flex: 1;
+
+    .rCard {
+      border-bottom: 1px solid $txtNeutral;
+      padding: 0.75em 0;
+    }
+  }
+}

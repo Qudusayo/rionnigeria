@@ -1,0 +1,11 @@
+.GridFiveLayer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5em;
+
+  &Section {
+    gap: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -1,0 +1,30 @@
+.FlexImageColumn {
+  display: flex;
+  gap: 4em;
+
+  &Rev{
+    flex-direction: row-reverse;
+  }
+
+  &Main {
+    width: 70%;
+  }
+
+  &Section {
+    .rCard {
+      padding: 0.75em 0;
+
+      gap: 1em;
+      align-items: center;
+
+      div {
+        display: flex;
+        flex-direction: column-reverse;
+
+        span {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
