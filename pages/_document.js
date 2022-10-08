@@ -10,18 +10,23 @@ export default function Document() {
           href="https://fonts.gstatic.com"
           crossOrigin="true"
         />
-        <link
+        {/* <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
           rel="stylesheet"
-        />
+        /> */}
+
         <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet"
+        ></link>
+        {/* <link
           href="https://api.fontshare.com/v2/css?f[]=clash-display@1&display=swap"
           rel="stylesheet"
         />
         <link
           rel="stylesheet"
           href="https://cdn.rawgit.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css"
-        ></link>
+        ></link> */}
       </Head>
       <body>
         <Main />

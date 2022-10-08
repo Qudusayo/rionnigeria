@@ -2,15 +2,17 @@
   display: flex;
   gap: 4em;
 
-  &Rev{
+  &Rev {
     flex-direction: row-reverse;
   }
 
   &Main {
-    width: 70%;
+    flex: 6;
   }
 
   &Section {
+    flex: 4;
+
     .rCard {
       padding: 0.75em 0;
 

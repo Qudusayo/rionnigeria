@@ -1,5 +1,6 @@
 @import "./../../styles/scss/variable";
 @import "./../../styles/scss/prev_image";
+@import "./../../styles/scss/prev_noimg";
 
 .BlogPost {
   &Nav {
@@ -37,7 +38,7 @@
           background: rgba(255, 153, 0, 0.1);
           border-radius: 8px;
           color: #ff9900;
-          font-family: $Gilroy;
+          font-family: $fontRegular;
           font-style: normal;
           font-weight: 800;
           padding: 0.5em 1em;
@@ -63,7 +64,7 @@
     &Date {
       display: block;
       color: #778797;
-      font-family: $Gilroy;
+      font-family: $fontRegular;
       margin-top: 0.5em;
     }
 

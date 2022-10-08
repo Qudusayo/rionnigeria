@@ -1,5 +1,10 @@
-$Gilroy: 'Gilroy', sans-serif;
-$ClashDisplay: 'Clash Display', sans-serif;
+@import "./font";
+
+$fontRegular: "GolosTextWebRegular";
+$fontMedium: "GolosTextWebMedium";
+$fontDemiBold: "GolosTextWebDemiBold";
+$fontBold: "GolosTextWebBold";
+$fontBlack: "GolosTextWebBlack";
 
 $primaryColor: #011D0D;
 $btnPrimary: #039341;

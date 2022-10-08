@@ -103,6 +103,8 @@ export async function getStaticProps() {
 
   const response = await client.getEntries({
     content_type: "travailsOfRevertes",
+    select:
+      "sys.id,fields.slug,fields.thumbnail,fields.title,fields.publishedDate",
   });
 
   return {

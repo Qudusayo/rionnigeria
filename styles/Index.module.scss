@@ -13,9 +13,10 @@
     &Sector {
       margin: 3em 0;
       &Title {
-        font-family: $ClashDisplay;
+        font-family: $fontMedium;
         font-weight: 500;
         font-size: 2em;
+        margin-bottom: .5em;
       }
 
       .PosersSector {
@@ -95,7 +96,7 @@
         &Section {
           h2 {
             font-weight: 500;
-            font-family: $ClashDisplay;
+            font-family: $fontDemiBold;
           }
 
           .rCard {
@@ -134,7 +135,7 @@
     margin: 3em auto;
 
     h2 {
-      font-family: $ClashDisplay;
+      font-family: $fontDemiBold;
       color: $white;
       width: 12em;
     }

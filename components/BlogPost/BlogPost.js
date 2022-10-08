@@ -83,26 +83,28 @@ export default function BlogPost({
             className={styles.rCard}
           />
           <h2 className={styles.FlexImageColumnSectionTitle}>More News</h2>
-          <Card
-            className={styles.rCard}
-            title="10 Places you can visit after your hajj"
-            date="Mon, 15th Aug."
-          />
-          <Card
-            className={styles.rCard}
-            title="10 Places you can visit after your hajj"
-            date="Mon, 15th Aug."
-          />
-          <Card
-            className={styles.rCard}
-            title="10 Places you can visit after your hajj"
-            date="Mon, 15th Aug."
-          />
-          <Card
-            className={styles.rCard}
-            title="10 Places you can visit after your hajj"
-            date="Mon, 15th Aug."
-          />
+          <div className={styles.FlexLeftNoImgCardExtra}>
+            <Card
+              className={styles.rCard}
+              title="10 Places you can visit after your hajj"
+              date="Mon, 15th Aug."
+            />
+            <Card
+              className={styles.rCard}
+              title="10 Places you can visit after your hajj"
+              date="Mon, 15th Aug."
+            />
+            <Card
+              className={styles.rCard}
+              title="10 Places you can visit after your hajj"
+              date="Mon, 15th Aug."
+            />
+            <Card
+              className={styles.rCard}
+              title="10 Places you can visit after your hajj"
+              date="Mon, 15th Aug."
+            />
+          </div>
         </div>
       </div>
       <div className={styles.BlogPostExtra}>

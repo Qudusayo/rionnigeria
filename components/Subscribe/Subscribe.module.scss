@@ -1,7 +1,7 @@
 @import "./../../styles/scss/variable";
 
 .Subscribe {
-  font-family: $Gilroy;
+  font-family: $fontRegular;
   background-color: $primaryColor;
   padding: 4em 6em;
 
@@ -19,7 +19,7 @@
     flex: 2;
 
     h2 {
-      font-family: $ClashDisplay;
+      font-family: $fontDemiBold;
       margin: 0;
       margin-bottom: 0.25em;
       font-size: 1.75em;
@@ -40,7 +40,7 @@
       color: $white;
       padding: 0.75em;
       margin: 0.5em 0 0.75em;
-      font-family: $ClashDisplay;
+      font-family: $fontDemiBold;
     }
   }
 }
