@@ -1,12 +1,6 @@
 import { createClient } from "contentful";
-import moment from "moment";
-import Link from "next/link";
-import { Card } from "..";
 import BlogPost from "../../components/BlogPost/BlogPost";
-import GridLayout from "../../components/GridLayout/GridLayout";
 import Component from "../../layout/Component/Component";
-
-import styles from "./../../styles/travails.module.scss";
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -14,6 +8,8 @@ const client = createClient({
 });
 
 export default function TravailsSlug({ travail }) {
+  if (!travail) return;
+
   const { post, author, publishedDate, title } = travail.fields;
   return (
     <Component>
