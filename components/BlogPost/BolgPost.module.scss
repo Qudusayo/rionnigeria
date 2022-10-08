@@ -1,0 +1,109 @@
+@import "./../../styles/scss/variable";
+@import "./../../styles/scss/prev_image";
+
+.BlogPost {
+  &Nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    div {
+      &:nth-of-type(1) {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+        margin-bottom: 1em;
+        cursor: pointer;
+
+        span:nth-of-type(1) {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: #ffffff;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          width: 2.5em;
+          height: 2.5em;
+          border-radius: 50%;
+        }
+
+        span:nth-of-type(2) {
+          color: #647382;
+        }
+      }
+
+      &:nth-of-type(2) {
+        text-align: center;
+
+        span {
+          background: rgba(255, 153, 0, 0.1);
+          border-radius: 8px;
+          color: #ff9900;
+          font-family: $Gilroy;
+          font-style: normal;
+          font-weight: 800;
+          padding: 0.5em 1em;
+        }
+      }
+    }
+  }
+
+  &Header {
+    text-align: center;
+
+    h2 {
+      font-size: 2em;
+      text-transform: capitalize;
+      margin-bottom: 0.5em;
+    }
+
+    h5 {
+      font-size: 1em;
+      text-transform: capitalize;
+    }
+
+    &Date {
+      display: block;
+      color: #778797;
+      font-family: $Gilroy;
+      margin-top: 0.5em;
+    }
+
+    &SocialShare {
+      display: flex;
+      align-items: center;
+      width: fit-content;
+      gap: 1em;
+      margin: 2em auto 3em;
+    }
+  }
+
+  .FlexImageColumn {
+    display: flex;
+    gap: 3em;
+    text-align: left;
+
+    &Main {
+      width: 70%;
+    }
+
+    &Section {
+      &Title {
+        font-weight: 500;
+        margin: 1em 0;
+      }
+
+      position: sticky;
+      top: 0;
+      height: 100vh;
+    }
+  }
+
+  &Extra {
+    margin: 4em auto;
+
+    &Title {
+      font-weight: 500;
+      font-size: 2em;
+      margin-bottom: .5em;
+    }
+  }
+}

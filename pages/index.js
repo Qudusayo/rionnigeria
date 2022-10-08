@@ -1,5 +1,7 @@
+import Link from "next/link";
 import Navbar from "../components/Navbar/Navbar";
 import Slider from "../components/Slider/Slider";
+import GridLayout from "../components/GridLayout/GridLayout";
 import styles from "./../styles/Index.module.scss";
 
 export default function Home() {
@@ -12,7 +14,7 @@ export default function Home() {
       <div className={styles.HomeContent}>
         <div className={styles.HomeContentSector}>
           <h2 className={styles.HomeContentSectorTitle}>Posers</h2>
-          <div className={styles.PosersSector}>
+          <GridLayout grid={4}>
             <Card
               imageUrl="https://www.arabianbusiness.com/cloud/2022/07/18/dubai-skyline.jpg"
               title="10 Places you can visit after your hajj"
@@ -33,7 +35,7 @@ export default function Home() {
               title="10 Places you can visit after your hajj"
               date="Mon, 15th Aug."
             />
-          </div>
+          </GridLayout>
         </div>
         <div className={styles.HomeContentSector}>
           <h2 className={styles.HomeContentSectorTitle}>Travails of Reverts</h2>
@@ -222,25 +224,35 @@ export default function Home() {
   );
 }
 
-export function Card({ imageUrl, title, date, summary, type, className }) {
+export function Card({
+  imageUrl,
+  title,
+  date,
+  summary,
+  type,
+  className,
+  contentURL = "/",
+}) {
   return (
-    <div
-      className={[
-        styles.Card,
-        type === "flex-left" && styles.CardFlexLeft,
-        type === "flex-right" && styles.CardFlexRight,
-        type === "flex-left-sm" && styles.CardFlexLeftSm,
-        className,
-      ].join(" ")}
-    >
-      {imageUrl && <img src={imageUrl} alt="title" />}
-      <div>
-        <span className={styles.CardDate}>
-          <span>Published on</span> {date}
-        </span>
-        <h2>{title}</h2>
-        {summary && <p>{summary}</p>}
+    <Link href={contentURL}>
+      <div
+        className={[
+          styles.Card,
+          type === "flex-left" && styles.CardFlexLeft,
+          type === "flex-right" && styles.CardFlexRight,
+          type === "flex-left-sm" && styles.CardFlexLeftSm,
+          className,
+        ].join(" ")}
+      >
+        {imageUrl && <img src={imageUrl} alt="title" />}
+        <div>
+          <span className={styles.CardDate}>
+            <span>Published on</span> {date}
+          </span>
+          <h2>{title}</h2>
+          {summary && <p>{summary}</p>}
+        </div>
       </div>
-    </div>
+    </Link>
   );
 }

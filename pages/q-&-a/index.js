@@ -6,7 +6,6 @@ import Navbar from "../../components/Navbar/Navbar";
 import styles from "./../../styles/q-n-a.module.scss";
 
 export default function QnA({ questionAndAnswers }) {
-  console.log(questionAndAnswers);
   return (
     <div className={styles.QnA}>
       <div>
