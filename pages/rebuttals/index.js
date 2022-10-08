@@ -48,6 +48,7 @@ export default function Rebutals({ rebuttals }) {
                 ?.map((rebuttal) => {
                   return (
                     <Card
+                      key={rebuttal.sys.id}
                       type="flex-left-sm"
                       imageUrl={
                         "https:" + rebuttal.fields.thumbnail.fields.file.url
