@@ -84,6 +84,18 @@
 
     &Main {
       width: 70%;
+
+      blockquote {
+        border-left: 3px solid $txtNeutral;
+        padding-left: 2em;
+
+        p,
+        b,
+        i,
+        u {
+          color: #38414a !important;
+        }
+      }
     }
 
     &Section {
@@ -104,7 +116,7 @@
     &Title {
       font-weight: 500;
       font-size: 2em;
-      margin-bottom: .5em;
+      margin-bottom: 0.5em;
     }
   }
 }

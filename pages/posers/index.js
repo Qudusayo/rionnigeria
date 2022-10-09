@@ -1,10 +1,12 @@
+import { createClient } from "contentful";
+import moment from "moment";
 import { Card } from "..";
 import GridLayout from "../../components/GridLayout/GridLayout";
 import Navbar from "../../components/Navbar/Navbar";
 import Component from "../../layout/Component/Component";
 import styles from "./../../styles/posers.module.scss";
 
-export default function Posers() {
+export default function Posers({ posers }) {
   return (
     <Component>
       <div className={styles.PosersSector}>
@@ -32,9 +34,12 @@ export default function Posers() {
           >
             <div className={styles.FlexLeftNoImgCardMain}>
               <Card
-                imageUrl="https://www.arabianbusiness.com/cloud/2022/07/18/dubai-skyline.jpg"
-                title="10 Places you can visit after your hajj"
-                date="Mon, 15th Aug."
+                imageUrl={"https:" + posers[0].fields.thumbnail.fields.file.url}
+                contentURL={"/posers/" + posers[0].fields.slug}
+                title={posers[0].fields.title}
+                date={moment(posers[0].fields.publishedDate).format(
+                  "MMM DD, YYYY, HH:mm"
+                )}
                 type="flex-left"
                 summary={
                   "Bibendum lectus vitae, pharetra enim. Odio aenean est eget lectus duis etiam sem in. Lorem tincidunt elit sed odio. At scelerisque in sapien velit libero. Posuere tellus laoreet elementum ac eget. Arcu facilisis velit, dui volutpat amet, consectetur augue sed mauris. Ipsum libero mauris malesuada quis ornare tortor lorem."
@@ -42,37 +47,36 @@ export default function Posers() {
               />
             </div>
             <div className={styles.FlexLeftNoImgCardExtra}>
-              <Card
-                className={styles.rCard}
-                title="THE KEYWORD PRAYERS OF THE PROPHETS: ANOTHER DEGREE QURAN HAS OVER BIBLE"
-                date="Mon, 15th Aug."
-              />
-              <Card
-                className={styles.rCard}
-                title="CHRISTMAS: AN ERRONEOUS & FALSE CELEBRATION, REFLECTION OF CHRISTIANITY"
-                date="Mon, 15th Aug."
-              />
-              <Card
-                className={styles.rCard}
-                title="1QURAN 3:61, A VERSE CHRISTIANS DARE NOT ATTEMPT"
-                date="Mon, 15th Aug."
-              />
-              <Card
-                className={styles.rCard}
-                title="MYTH OF DEFINING A CHRISTIAN"
-                date="Mon, 15th Aug."
-              />
+              {posers
+                .slice(1, 5)
+                .reverse()
+                ?.map((poser) => {
+                  return (
+                    <Card
+                      key={poser.sys.id}
+                      contentURL={"/posers/" + poser.fields.slug}
+                      title={poser.fields.title}
+                      date={moment(poser.fields.publishedDate).format(
+                        "MMM DD, YYYY, HH:mm"
+                      )}
+                      className={styles.rCard}
+                    />
+                  );
+                })}
             </div>
           </div>
         </div>
         <GridLayout grid={4}>
-          {[1, 2, 3, 4, 5, 6, 7, 8].map((_, index) => {
+          {posers.slice(5)?.map((poser) => {
             return (
               <Card
-                key={index}
-                imageUrl="https://www.arabianbusiness.com/cloud/2022/07/18/dubai-skyline.jpg"
-                title="10 Places you can visit after your hajj"
-                date="Mon, 15th Aug."
+                key={poser.sys.id}
+                imageUrl={"https:" + poser.fields.thumbnail.fields.file.url}
+                contentURL={"/posers/" + poser.fields.slug}
+                title={poser.fields.title}
+                date={moment(poser.fields.publishedDate).format(
+                  "MMM DD, YYYY, HH:mm"
+                )}
                 className={styles.CardAbsolute}
               />
             );
@@ -81,4 +85,24 @@ export default function Posers() {
       </div>
     </Component>
   );
+}
+
+export async function getStaticProps() {
+  const client = createClient({
+    space: process.env.CONTENTFUL_SPACE_ID,
+    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+  });
+
+  const response = await client.getEntries({
+    content_type: "poser",
+    select:
+      "sys.id,fields.slug,fields.thumbnail,fields.title,fields.publishedDate",
+  });
+
+  return {
+    props: {
+      posers: response.items,
+    },
+    revalidate: 1,
+  };
 }

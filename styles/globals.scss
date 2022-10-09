@@ -38,6 +38,15 @@ p {
   }
 }
 
+blockquote::selection,
+p::selection,
+b::selection,
+i::selection,
+u::selection {
+  background-color: #46b96c;
+  color: #ffffff;
+}
+
 button {
   cursor: pointer;
   outline: none;

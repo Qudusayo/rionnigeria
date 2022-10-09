@@ -39,7 +39,7 @@ export default function Footer() {
           <h2>Links</h2>
           <ul>
             <li>
-              <Link href="/monthly-message">Monthly Messages</Link>
+              <Link href="/monthly-messages">Monthly Messages</Link>
             </li>
             <li>
               <Link href="/posers">Posers</Link>
