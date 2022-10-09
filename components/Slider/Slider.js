@@ -18,7 +18,12 @@ export default function Slider() {
       >
         <SwiperSlide>
           <div className="swiper-carousel-animate-opacity">
-            <img src={"/bg/about-bg.webp"} alt="" />
+            <img
+              src={"/bg/about-bg.webp"}
+              width="400px"
+              height="400px"
+              alt="slider"
+            />
             <div className="slide-content">
               <h2>The PathWay</h2>
               <p>
@@ -30,13 +35,18 @@ export default function Slider() {
         </SwiperSlide>
         <SwiperSlide>
           <div className="swiper-carousel-animate-opacity">
-            <img src={"/bg/activities-bg.webp"} alt="" />
+            <img
+              src={"/bg/activities-bg.webp"}
+              width="400px"
+              height="400px"
+              alt="slider"
+            />
             <div className="slide-content">
               <h2>The Library Mosque</h2>
               <p>
-                Determined to ensure Superman&#39;s ultimate sacrifice was not in
-                vain, Bruce Wayne aligns forces with Diana Prince with plans to
-                recruit a team of metahumans to protect the world from an
+                Determined to ensure Superman&#39;s ultimate sacrifice was not
+                in vain, Bruce Wayne aligns forces with Diana Prince with plans
+                to recruit a team of metahumans to protect the world from an
                 approaching threat of catastrophic proportions.
               </p>
             </div>
@@ -44,7 +54,12 @@ export default function Slider() {
         </SwiperSlide>
         <SwiperSlide>
           <div className="swiper-carousel-animate-opacity">
-            <img src={"/bg/contact-bg.webp"} alt="" />
+            <img
+              src={"/bg/contact-bg.webp"}
+              width="400px"
+              height="400px"
+              alt="slider"
+            />
             <div className="slide-content">
               <h2>The School Mosque</h2>
               <p>
@@ -57,7 +72,12 @@ export default function Slider() {
         </SwiperSlide>
         <SwiperSlide>
           <div className="swiper-carousel-animate-opacity">
-            <img src={"/images/mosque.webp"} alt="" />
+            <img
+              src={"/images/mosque.webp"}
+              width="400px"
+              height="400px"
+              alt="slider"
+            />
             <div className="slide-content">
               <h2>The General Mosque</h2>
               <p>
@@ -71,7 +91,12 @@ export default function Slider() {
         </SwiperSlide>
         <SwiperSlide>
           <div className="swiper-carousel-animate-opacity">
-            <img src={"/images/library.webp"} alt="" />
+            <img
+              src={"/images/library.webp"}
+              width="400px"
+              height="400px"
+              alt="slider"
+            />
             <div className="slide-content">
               <h2>Islamic Library</h2>
               <p>
@@ -84,7 +109,12 @@ export default function Slider() {
         </SwiperSlide>
         <SwiperSlide>
           <div className="swiper-carousel-animate-opacity">
-            <img src={"/images/school.webp"} alt="" />
+            <img
+              src={"/images/school.webp"}
+              width="400px"
+              height="400px"
+              alt="slider"
+            />
             <div className="slide-content">
               <h2>The School</h2>
               <p>

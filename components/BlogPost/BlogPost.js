@@ -70,14 +70,14 @@ export default function BlogPost({
           <h2 className={styles.FlexImageColumnSectionTitle}>Recent News</h2>
           <Card
             type="flex-left-sm"
-            imageUrl="https://www.arabianbusiness.com/cloud/2022/07/18/dubai-skyline.webp"
+            imageUrl="/images/dubai-skyline.webp"
             title="10 Places you can visit after your hajj"
             date="Mon, 15th Aug."
             className={styles.rCard}
           />
           <Card
             type="flex-left-sm"
-            imageUrl="https://www.arabianbusiness.com/cloud/2022/07/18/dubai-skyline.webp"
+            imageUrl="/images/dubai-skyline.webp"
             title="10 Places you can visit after your hajj"
             date="Mon, 15th Aug."
             className={styles.rCard}
@@ -111,22 +111,22 @@ export default function BlogPost({
         <h2 className={styles.BlogPostExtraTitle}>Posers</h2>
         <GridLayout grid={4}>
           <Card
-            imageUrl="https://www.arabianbusiness.com/cloud/2022/07/18/dubai-skyline.webp"
+            imageUrl="/images/dubai-skyline.webp"
             title="10 Places you can visit after your hajj"
             date="Mon, 15th Aug."
           />
           <Card
-            imageUrl="https://www.arabianbusiness.com/cloud/2022/07/18/dubai-skyline.webp"
+            imageUrl="/images/dubai-skyline.webp"
             title="10 Places you can visit after your hajj"
             date="Mon, 15th Aug."
           />
           <Card
-            imageUrl="https://www.arabianbusiness.com/cloud/2022/07/18/dubai-skyline.webp"
+            imageUrl="/images/dubai-skyline.webp"
             title="10 Places you can visit after your hajj"
             date="Mon, 15th Aug."
           />
           <Card
-            imageUrl="https://www.arabianbusiness.com/cloud/2022/07/18/dubai-skyline.webp"
+            imageUrl="/images/dubai-skyline.webp"
             title="10 Places you can visit after your hajj"
             date="Mon, 15th Aug."
           />
