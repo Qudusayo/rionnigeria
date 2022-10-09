@@ -7,7 +7,7 @@ export default function About() {
       <CommonHero
         title="About Us"
         info="Get to know more about what we do"
-        bg="/bg/about-bg.jpeg"
+        bg="/bg/about-bg.webp"
       />
       <div className={styles.InfoContent}>
         <div className={styles.InfoContentSector}>

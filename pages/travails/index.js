@@ -38,7 +38,7 @@ export default function Travails({ travailsOfRevertes }) {
           {/* <div className={styles.FlexImageColumn}>
             <div className={styles.FlexImageColumnMain}>
               <Card
-                imageUrl="https://www.arabianbusiness.com/cloud/2022/07/18/dubai-skyline.jpg"
+                imageUrl="https://www.arabianbusiness.com/cloud/2022/07/18/dubai-skyline.webp"
                 title="10 Places you can visit after your hajj"
                 date="Mon, 15th Aug."
                 type="flex-right"
@@ -50,21 +50,21 @@ export default function Travails({ travailsOfRevertes }) {
             <div className={styles.FlexImageColumnSection}>
               <Card
                 type="flex-left-sm"
-                imageUrl="https://www.arabianbusiness.com/cloud/2022/07/18/dubai-skyline.jpg"
+                imageUrl="https://www.arabianbusiness.com/cloud/2022/07/18/dubai-skyline.webp"
                 title="10 Places you can visit after your hajj"
                 date="Mon, 15th Aug."
                 className={styles.rCard}
               />
               <Card
                 type="flex-left-sm"
-                imageUrl="https://www.arabianbusiness.com/cloud/2022/07/18/dubai-skyline.jpg"
+                imageUrl="https://www.arabianbusiness.com/cloud/2022/07/18/dubai-skyline.webp"
                 title="10 Places you can visit after your hajj"
                 date="Mon, 15th Aug."
                 className={styles.rCard}
               />
               <Card
                 type="flex-left-sm"
-                imageUrl="https://www.arabianbusiness.com/cloud/2022/07/18/dubai-skyline.jpg"
+                imageUrl="https://www.arabianbusiness.com/cloud/2022/07/18/dubai-skyline.webp"
                 title="10 Places you can visit after your hajj"
                 date="Mon, 15th Aug."
                 className={styles.rCard}

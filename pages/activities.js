@@ -8,7 +8,7 @@ export default function About() {
       <CommonHero
         title="Activity"
         info="Get to know more about what we do"
-        bg="/bg/activities-bg.jpeg"
+        bg="/bg/activities-bg.webp"
       />
       <div className={styles.ActivityCard}>
         Programme of activities of the Organization is designed to aid and

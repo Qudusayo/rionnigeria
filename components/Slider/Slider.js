@@ -18,7 +18,7 @@ export default function Slider() {
       >
         <SwiperSlide>
           <div className="swiper-carousel-animate-opacity">
-            <img src={"/bg/about-bg.jpeg"} alt="" />
+            <img src={"/bg/about-bg.webp"} alt="" />
             <div className="slide-content">
               <h2>The PathWay</h2>
               <p>
@@ -30,7 +30,7 @@ export default function Slider() {
         </SwiperSlide>
         <SwiperSlide>
           <div className="swiper-carousel-animate-opacity">
-            <img src={"/bg/activities-bg.jpeg"} alt="" />
+            <img src={"/bg/activities-bg.webp"} alt="" />
             <div className="slide-content">
               <h2>The Library Mosque</h2>
               <p>
@@ -44,7 +44,7 @@ export default function Slider() {
         </SwiperSlide>
         <SwiperSlide>
           <div className="swiper-carousel-animate-opacity">
-            <img src={"/bg/contact-bg.jpeg"} alt="" />
+            <img src={"/bg/contact-bg.webp"} alt="" />
             <div className="slide-content">
               <h2>The School Mosque</h2>
               <p>
@@ -57,7 +57,7 @@ export default function Slider() {
         </SwiperSlide>
         <SwiperSlide>
           <div className="swiper-carousel-animate-opacity">
-            <img src={"/images/mosque.jpeg"} alt="" />
+            <img src={"/images/mosque.webp"} alt="" />
             <div className="slide-content">
               <h2>The General Mosque</h2>
               <p>
@@ -71,7 +71,7 @@ export default function Slider() {
         </SwiperSlide>
         <SwiperSlide>
           <div className="swiper-carousel-animate-opacity">
-            <img src={"/images/library.jpeg"} alt="" />
+            <img src={"/images/library.webp"} alt="" />
             <div className="slide-content">
               <h2>Islamic Library</h2>
               <p>
@@ -84,7 +84,7 @@ export default function Slider() {
         </SwiperSlide>
         <SwiperSlide>
           <div className="swiper-carousel-animate-opacity">
-            <img src={"/images/school.jpeg"} alt="" />
+            <img src={"/images/school.webp"} alt="" />
             <div className="slide-content">
               <h2>The School</h2>
               <p>

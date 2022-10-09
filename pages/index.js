@@ -16,22 +16,22 @@ export default function Home() {
           <h2 className={styles.HomeContentSectorTitle}>Posers</h2>
           <GridLayout grid={4}>
             <Card
-              imageUrl="https://www.arabianbusiness.com/cloud/2022/07/18/dubai-skyline.jpg"
+              imageUrl="/images/dubai-skyline.webp"
               title="10 Places you can visit after your hajj"
               date="Mon, 15th Aug."
             />
             <Card
-              imageUrl="https://www.arabianbusiness.com/cloud/2022/07/18/dubai-skyline.jpg"
+              imageUrl="/images/dubai-skyline.webp"
               title="10 Places you can visit after your hajj"
               date="Mon, 15th Aug."
             />
             <Card
-              imageUrl="https://www.arabianbusiness.com/cloud/2022/07/18/dubai-skyline.jpg"
+              imageUrl="/images/dubai-skyline.webp"
               title="10 Places you can visit after your hajj"
               date="Mon, 15th Aug."
             />
             <Card
-              imageUrl="https://www.arabianbusiness.com/cloud/2022/07/18/dubai-skyline.jpg"
+              imageUrl="/images/dubai-skyline.webp"
               title="10 Places you can visit after your hajj"
               date="Mon, 15th Aug."
             />
@@ -42,7 +42,7 @@ export default function Home() {
           <div className={styles.FlexImageColumn}>
             <div className={styles.FlexImageColumnMain}>
               <Card
-                imageUrl="https://www.arabianbusiness.com/cloud/2022/07/18/dubai-skyline.jpg"
+                imageUrl="/images/dubai-skyline.webp"
                 title="10 Places you can visit after your hajj"
                 date="Mon, 15th Aug."
                 type="flex-right"
@@ -54,21 +54,21 @@ export default function Home() {
             <div className={styles.FlexImageColumnSection}>
               <Card
                 type="flex-left-sm"
-                imageUrl="https://www.arabianbusiness.com/cloud/2022/07/18/dubai-skyline.jpg"
+                imageUrl="/images/dubai-skyline.webp"
                 title="10 Places you can visit after your hajj"
                 date="Mon, 15th Aug."
                 className={styles.rCard}
               />
               <Card
                 type="flex-left-sm"
-                imageUrl="https://www.arabianbusiness.com/cloud/2022/07/18/dubai-skyline.jpg"
+                imageUrl="/images/dubai-skyline.webp"
                 title="10 Places you can visit after your hajj"
                 date="Mon, 15th Aug."
                 className={styles.rCard}
               />
               <Card
                 type="flex-left-sm"
-                imageUrl="https://www.arabianbusiness.com/cloud/2022/07/18/dubai-skyline.jpg"
+                imageUrl="/images/dubai-skyline.webp"
                 title="10 Places you can visit after your hajj"
                 date="Mon, 15th Aug."
                 className={styles.rCard}
@@ -82,7 +82,7 @@ export default function Home() {
           <div className={styles.GridFiveLayer}>
             <div className={styles.GridFiveLayerMain}>
               <Card
-                imageUrl="https://www.arabianbusiness.com/cloud/2022/07/18/dubai-skyline.jpg"
+                imageUrl="/images/dubai-skyline.webp"
                 title="10 Places you can visit after your hajj"
                 date="Mon, 15th Aug."
                 summary="Bibendum lectus vitae, pharetra enim. Odio aenean est eget lectus duis etiam sem in. Lorem tincidunt elit sed odio. At scelerisque in sapien velit libero. Posuere tellus laoreet elementum ac eget. Arcu facilisis velit, dui volutpat amet, consectetur augue sed mauris. Ipsum libero mauris malesuada quis ornare tortor lorem."
@@ -90,22 +90,22 @@ export default function Home() {
             </div>
             <div className={styles.GridFiveLayerSection}>
               <Card
-                imageUrl="https://www.arabianbusiness.com/cloud/2022/07/18/dubai-skyline.jpg"
+                imageUrl="/images/dubai-skyline.webp"
                 title="10 Places you can visit after your hajj"
                 date="Mon, 15th Aug."
               />
               <Card
-                imageUrl="https://www.arabianbusiness.com/cloud/2022/07/18/dubai-skyline.jpg"
+                imageUrl="/images/dubai-skyline.webp"
                 title="10 Places you can visit after your hajj"
                 date="Mon, 15th Aug."
               />
               <Card
-                imageUrl="https://www.arabianbusiness.com/cloud/2022/07/18/dubai-skyline.jpg"
+                imageUrl="/images/dubai-skyline.webp"
                 title="10 Places you can visit after your hajj"
                 date="Mon, 15th Aug."
               />
               <Card
-                imageUrl="https://www.arabianbusiness.com/cloud/2022/07/18/dubai-skyline.jpg"
+                imageUrl="/images/dubai-skyline.webp"
                 title="10 Places you can visit after your hajj"
                 date="Mon, 15th Aug."
               />
@@ -123,7 +123,7 @@ export default function Home() {
           <div className={styles.FlexLeftNoImgCard}>
             <div className={styles.FlexLeftNoImgCardMain}>
               <Card
-                imageUrl="https://www.arabianbusiness.com/cloud/2022/07/18/dubai-skyline.jpg"
+                imageUrl="/images/dubai-skyline.webp"
                 title="10 Places you can visit after your hajj"
                 date="Mon, 15th Aug."
                 type="flex-left"
@@ -162,25 +162,25 @@ export default function Home() {
           <div className={styles.QnASector}>
             <div className={styles.QnASectorMain}>
               <Card
-                imageUrl="https://www.arabianbusiness.com/cloud/2022/07/18/dubai-skyline.jpg"
+                imageUrl="/images/dubai-skyline.webp"
                 title="10 Places you can visit after your hajj"
                 date="Mon, 15th Aug."
                 className={styles.CardAbsolute}
               />
               <Card
-                imageUrl="https://www.arabianbusiness.com/cloud/2022/07/18/dubai-skyline.jpg"
+                imageUrl="/images/dubai-skyline.webp"
                 title="10 Places you can visit after your hajj"
                 date="Mon, 15th Aug."
                 className={styles.CardAbsolute}
               />
               <Card
-                imageUrl="https://www.arabianbusiness.com/cloud/2022/07/18/dubai-skyline.jpg"
+                imageUrl="/images/dubai-skyline.webp"
                 title="10 Places you can visit after your hajj"
                 date="Mon, 15th Aug."
                 className={styles.CardAbsolute}
               />
               <Card
-                imageUrl="https://www.arabianbusiness.com/cloud/2022/07/18/dubai-skyline.jpg"
+                imageUrl="/images/dubai-skyline.webp"
                 title="ARE AHMADIS MUSLIMS?"
                 date="Mon, 15th Aug."
                 className={styles.CardAbsolute}
@@ -190,28 +190,28 @@ export default function Home() {
               <h2>Other News</h2>
               <Card
                 type="flex-left-sm"
-                imageUrl="https://www.arabianbusiness.com/cloud/2022/07/18/dubai-skyline.jpg"
+                imageUrl="/images/dubai-skyline.webp"
                 title="10 Places you can visit after your hajj"
                 date="Mon, 15th Aug."
                 className={styles.rCard}
               />
               <Card
                 type="flex-left-sm"
-                imageUrl="https://www.arabianbusiness.com/cloud/2022/07/18/dubai-skyline.jpg"
+                imageUrl="/images/dubai-skyline.webp"
                 title="10 Places you can visit after your hajj"
                 date="Mon, 15th Aug."
                 className={styles.rCard}
               />
               <Card
                 type="flex-left-sm"
-                imageUrl="https://www.arabianbusiness.com/cloud/2022/07/18/dubai-skyline.jpg"
+                imageUrl="/images/dubai-skyline.webp"
                 title="10 Places you can visit after your hajj"
                 date="Mon, 15th Aug."
                 className={styles.rCard}
               />
               <Card
                 type="flex-left-sm"
-                imageUrl="https://www.arabianbusiness.com/cloud/2022/07/18/dubai-skyline.jpg"
+                imageUrl="/images/dubai-skyline.webp"
                 title="10 Places you can visit after your hajj"
                 date="Mon, 15th Aug."
                 className={styles.rCard}

@@ -10,7 +10,7 @@ export default function Contact() {
       <CommonHero
         title="Contact Us"
         info="Get in touch with us"
-        bg="/bg/contact-bg.jpeg"
+        bg="/bg/contact-bg.webp"
       />
       <div className={styles.ContactContent}>
         <div className={styles.ContactContentInfo}>
