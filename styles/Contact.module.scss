@@ -92,5 +92,28 @@
         }
       }
     }
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      width: 90%;
+      top: 0;
+      gap: 0;
+      margin-bottom: 0;
+
+      &Info {
+        h2 {
+          font-size: 1.5em;
+        }
+      }
+
+      &Form {
+        display: block;
+        margin: 2em auto;
+
+        h2{
+          font-size: 1.5em;
+        }
+      }
+    }
   }
 }

@@ -43,6 +43,27 @@
       font-family: $fontDemiBold;
     }
   }
+
+  @media screen and (max-width: 768px){
+    padding: 3em 0;
+
+    &Content{
+      flex-direction: column;
+      width: 90%;
+      max-width: 90%;
+    }
+
+    &Header{
+      h2{
+        font-size: 1.5em;
+      }
+    }
+
+    &Form{
+      width: 100%;
+      margin-top: 2em;
+    }
+  }
 }
 
 .Button {
