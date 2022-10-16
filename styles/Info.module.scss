@@ -69,4 +69,22 @@
       margin: 1.25em 0;
     }
   }
+
+  @media screen and (max-width: 768px){
+    .ActivityCard{
+      width: 90%;
+      top: -5em;
+      padding: 2em;
+      margin-bottom: -5em;
+    }
+
+    &Content{
+      flex-direction: column;
+    }
+
+    &Card{
+      width: 90%;
+      padding: 2em;
+    }
+  }
 }
