@@ -21,5 +21,20 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 1em;
     }
+
+    @media screen and (max-width: 768px) {
+      width: 90%;
+
+      &Info{
+        width: 100%;
+      }
+
+      &Cards {
+        margin-top: 2em;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1em;
+      }
+    }
   }
 }
