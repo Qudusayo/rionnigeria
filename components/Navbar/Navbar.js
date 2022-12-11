@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { useRouter } from "next/router";
 import styles from "./Navbar.module.scss";
+import { useRouter } from "next/router";
 
 export default function Navbar({ className, type }) {
   const router = useRouter();
