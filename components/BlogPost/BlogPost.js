@@ -32,34 +32,37 @@ export default function BlogPost({
         <div>
           <span>{sector}</span>
         </div>
-        <div></div>
       </div>
       <div className={styles.BlogPostHeader}>
         <h2>{title.toLowerCase()}</h2>
-        <h5>By {author.toLowerCase()}</h5>
-        <span className={styles.BlogPostHeaderDate}>
-          {moment(publishedDate).format("MMM DD, YYYY, HH:mm")}
-        </span>
-        <div className={styles.BlogPostHeaderSocialShare}>
-          <span>Share via: </span>
-          <span>
-            <a
-              href={`https://www.facebook.com/sharer/sharer.php?u=https://rionnigeria.vercel.app${router.asPath}`}
-              rel="noreferrer"
-              target="_blank"
-            >
-              <IoLogoFacebook fill="#1877F2" size={35} />
-            </a>
-          </span>
-          <span>
-            <a
-              href={`http://twitter.com/share?text=${title}&url=https://rionnigeria.vercel.app${router.asPath}`}
-              rel="noreferrer"
-              target="_blank"
-            >
-              <AiFillTwitterCircle fill="#1B9DF0" size={35} />
-            </a>
-          </span>
+        <div className={styles.BlogPostHeaderShare}>
+          <div className={styles.BlogPostHeaderShareInfo}>
+            <h5>By {author.toLowerCase()}</h5>
+            <span className={styles.BlogPostHeaderDate}>
+              {moment(publishedDate).format("MMM DD, YYYY, HH:mm")}
+            </span>
+          </div>
+          <div className={styles.BlogPostHeaderSocialShare}>
+            <span>Share via: </span>
+            <span>
+              <a
+                href={`https://www.facebook.com/sharer/sharer.php?u=https://rionnigeria.vercel.app${router.asPath}`}
+                rel="noreferrer"
+                target="_blank"
+              >
+                <IoLogoFacebook fill="#1877F2" size={35} />
+              </a>
+            </span>
+            <span>
+              <a
+                href={`http://twitter.com/share?text=${title}&url=https://rionnigeria.vercel.app${router.asPath}`}
+                rel="noreferrer"
+                target="_blank"
+              >
+                <AiFillTwitterCircle fill="#1B9DF0" size={35} />
+              </a>
+            </span>
+          </div>
         </div>
       </div>
       <div className={styles.FlexImageColumn}>

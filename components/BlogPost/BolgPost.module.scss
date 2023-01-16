@@ -7,6 +7,10 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 
+    @media screen and (max-width: 768px) {
+      margin: 8em 0 1em;
+    }
+
     div {
       &:nth-of-type(1) {
         display: flex;
@@ -43,6 +47,10 @@
           font-weight: 800;
           padding: 0.5em 1em;
         }
+
+        @media screen and (max-width: 768px) {
+          display: none;
+        }
       }
     }
   }
@@ -75,6 +83,43 @@
       gap: 1em;
       margin: 2em auto 3em;
     }
+
+    @media screen and (max-width: 768px) {
+      h2 {
+        text-align: left;
+        font-weight: 400;
+      }
+
+      &Share {
+        margin: 2em 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &Info {
+          text-align: left;
+
+          h5 {
+            font-size: 1.2em;
+            margin: 0;
+          }
+
+          span {
+            font-size: 0.85em;
+          }
+        }
+
+        .BlogPostHeaderSocialShare {
+          margin: 0;
+
+          span {
+            &:nth-of-type(1) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
   }
 
   .FlexImageColumn {
@@ -84,6 +129,10 @@
 
     &Main {
       width: 70%;
+
+      p {
+        line-height: 1.75em;
+      }
 
       blockquote {
         border-left: 3px solid $txtNeutral;
@@ -107,6 +156,23 @@
       position: sticky;
       top: 0;
       height: 100vh;
+    }
+
+    @media screen and (max-width: 768px) {
+      gap: 0;
+      font-size: 1.1em;
+      flex-direction: column;
+
+      &Main {
+        width: 100%;
+      }
+
+      &Section {
+        .FlexImageColumnSectionTitle:nth-last-of-type(1),
+        .FlexLeftNoImgCardExtra {
+          display: none;
+        }
+      }
     }
   }
 
