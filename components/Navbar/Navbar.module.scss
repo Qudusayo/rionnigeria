@@ -7,12 +7,77 @@
     flex-direction: column;
     align-items: center;
     width: 90%;
-    gap: 1em;
-    padding-top: 1em;
 
-    img {
-      width: 2.5em;
-      // display: block;
+    &Header {
+      padding: 1em 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @media screen and (max-width: 768px) {
+        justify-content: space-between;
+      }
+
+      img {
+        width: 2.5em;
+        display: block;
+      }
+
+      .hamburger {
+        position: relative;
+        display: none;
+        right: 20px;
+        z-index: 2000;
+
+        @media screen and (max-width: 768px) {
+          display: block;
+          right: 0;
+        }
+
+        label {
+          display: flex;
+          flex-direction: column;
+        }
+
+        &_bars {
+          height: 3px;
+          width: 35px;
+          border-radius: 40px;
+          display: inline-block;
+          background-color: #000000;
+          margin: 2.5px 0;
+          cursor: pointer;
+          transition: all 0.3s linear;
+
+          &:nth-of-type(2) {
+            width: 20px;
+          }
+        }
+
+        &_check {
+          position: fixed;
+          margin: 0;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transform: translateX(99999px);
+
+          &:checked + label {
+            & .hamburger_bars:nth-of-type(1) {
+              transform: rotate(45deg);
+            }
+            & .hamburger_bars:nth-of-type(2) {
+              opacity: 0;
+            }
+            & .hamburger_bars:nth-of-type(3) {
+              position: absolute;
+              top: 1px;
+              transform: rotate(-45deg);
+            }
+          }
+        }
+      }
     }
   }
 
@@ -20,16 +85,10 @@
     display: flex;
     align-items: center;
     width: 100%;
-    // justify-content: space-between;
     border: 1.5px solid #e8ebee;
     border-right: 0;
     border-left: 0;
     margin: 0;
-
-    // position: fixed;
-    // z-index: 10;
-    // width: 100%;
-    // top: 0;
 
     li {
       font-weight: 500;
@@ -75,60 +134,41 @@
 
   @media screen and (max-width: 768px) {
     background-color: #ffffff;
-    position: fixed;
     width: 100%;
     background-color: #ffffff;
     top: 0;
     z-index: 100;
-    min-height: 100vh;
-    display: none;
+    position: fixed;
+    overflow-y: scroll;
+    max-height: 100%;
 
     ul {
+      top: 0;
+      padding: 1em 0;
+      border: none;
       flex-direction: column;
       height: max-content;
-      border: 1px solid red;
       overflow-y: auto;
+
+      &.visibleNav {
+        display: block;
+      }
+
+      &.inVisibleNav {
+        display: none;
+      }
 
       li {
         width: 100%;
         padding: 0;
-        animation: slideIn 0.5s linear;
-        // border: 1px solid red;
-
+        text-align: left;
+        border-bottom: 1px solid #e6e6e6;
         background: linear-gradient(0deg, #039341, #039341) no-repeat right
           bottom / 0 var(--bg-h);
-
         transition: background-size 350ms;
 
-        &:nth-of-type(2) {
-          animation-delay: 0.2s;
-        }
-        &:nth-of-type(3) {
-          animation-delay: 0.4s;
-        }
-        &:nth-of-type(4) {
-          animation-delay: 0.6s;
-        }
-        &:nth-of-type(5) {
-          animation-delay: 0.8s;
-        }
-        &:nth-of-type(6) {
-          animation-delay: 1s;
-        }
-        &:nth-of-type(7) {
-          animation-delay: 1.2s;
-        }
-        &:nth-of-type(8) {
-          animation-delay: 1.4s;
-        }
-        &:nth-of-type(9) {
-          animation-delay: 1.6s;
-        }
-        &:nth-of-type(10) {
-          animation-delay: 1.8s;
-        }
-        &:nth-of-type(11) {
-          animation-delay: 2s;
+        &:nth-last-of-type(1) {
+          border-bottom: none;
         }
 
         a {
@@ -136,6 +176,10 @@
           width: 100%;
           padding: 1.5em 0;
           color: #778797;
+
+          &:hover {
+            color: #039341;
+          }
         }
       }
 
@@ -147,18 +191,5 @@
         background-color: #ffffff !important;
       }
     }
-  }
-}
-
-@keyframes slideIn {
-  0% {
-    margin-left: 215%;
-    background-size: 100% var(--bg-h);
-    background-position-x: left;
-    --bg-h: 2px;
-  }
-
-  100% {
-    margin-left: 0;
   }
 }

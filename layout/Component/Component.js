@@ -1,19 +1,13 @@
 import Navbar from "../../components/Navbar/Navbar";
+import styles from "./Component.module.scss";
 
 export default function Component({ children }) {
   return (
-    <div>
+    <div className={styles.Component}>
       <div>
         <Navbar type="solid" />
       </div>
-      <div
-        style={{
-          width: "90%",
-          margin: "3em auto",
-        }}
-      >
-        {children}
-      </div>
+      <div className={styles.ComponentChildren}>{children}</div>
     </div>
   );
 }

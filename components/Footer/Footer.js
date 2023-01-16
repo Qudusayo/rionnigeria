@@ -51,7 +51,7 @@ export default function Footer() {
               <Link href="/q-&-a">Q &amp; A</Link>
             </li>
             <li>
-              <Link href="/rebutals">Rebutals</Link>
+              <Link href="/rebuttals">Rebuttals</Link>
             </li>
             <li>
               <Link href="/travails">Travails of revertees</Link>

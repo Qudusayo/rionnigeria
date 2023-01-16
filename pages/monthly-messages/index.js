@@ -1,3 +1,9 @@
+import Component from "../../layout/Component/Component";
+
 export default function MonthlyMessages() {
-  return <div>MonthlyMessages</div>;
+  return (
+    <Component>
+      <div>MonthlyMessages</div>
+    </Component>
+  );
 }

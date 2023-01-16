@@ -1,9 +1,15 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import styles from "./Navbar.module.scss";
+import { useEffect, useState } from "react";
 
 export default function Navbar({ className, type }) {
+  const [visibility, setVisibility] = useState(false);
   const router = useRouter();
+
+  useEffect(() => {
+    setVisibility(false);
+  }, []);
 
   return (
     <nav
@@ -14,8 +20,25 @@ export default function Navbar({ className, type }) {
       ].join(" ")}
     >
       <div className={styles.NavbarContent}>
-        <img src="/logo.svg" alt="logo" />
-        <ul>
+        <div className={styles.NavbarContentHeader}>
+          <img src="/logo.svg" alt="logo" />
+          <div className={styles.hamburger}>
+            <input
+              type="checkbox"
+              tabIndex="-1"
+              id="checkbox"
+              className={styles.hamburger_check}
+              defaultChecked={visibility}
+              onChange={() => setVisibility((visibility) => !visibility)}
+            />
+            <label htmlFor="checkbox">
+              <span className={styles.hamburger_bars}></span>
+              <span className={styles.hamburger_bars}></span>
+              <span className={styles.hamburger_bars}></span>
+            </label>
+          </div>
+        </div>
+        <ul className={visibility ? styles.visibleNav : styles.inVisibleNav}>
           <li className={router.pathname === "/" ? styles.activeNav : ""}>
             <Link href="/">Home</Link>
           </li>

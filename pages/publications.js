@@ -1,3 +1,9 @@
+import Component from "../layout/Component/Component";
+
 export default function Publications() {
-  return <div>Publications</div>;
+  return (
+    <Component>
+      <div>Publications</div>
+    </Component>
+  );
 }
