@@ -3,6 +3,23 @@ import CommonHero from "../components/CommonHero/CommonHero";
 import { Button } from "../components/Subscribe/Subscribe";
 
 import styles from "./../styles/Contact.module.scss";
+import { useFormik } from "formik";
+import axios from "axios";
+import { useState } from "react";
+
+const validate = (values) => {
+  const errors = {};
+
+  if (!values.email) {
+    errors.email = "Kindly enter a valid email";
+  }
+
+  if (!values.message) {
+    errors.message = "A message is required";
+  }
+
+  return errors;
+};
 
 export default function Contact() {
   return (
@@ -46,31 +63,134 @@ export default function Contact() {
             </div>
           </div>
         </div>
-        <form className={styles.ContactContentForm}>
-          <h2>Send us a Message</h2>
-          <div>
-            <label htmlFor="name">Your Name</label>
-            <input id="name" />
-          </div>
-          <div>
-            <label htmlFor="email">Email Address</label>
-            <input id="email" />
-          </div>
-          <div>
-            <label htmlFor="phoneNumber">Phone Number</label>
-            <input id="phoneNumber" />
-          </div>
-          <div>
-            <label htmlFor="subject">Subject</label>
-            <input id="subject" />
-          </div>
-          <div>
-            <label htmlFor="message">Message</label>
-            <textarea id="message" rows={4}></textarea>
-          </div>
-          <Button title="Submit" />
-        </form>
+        <FormEntry />
       </div>
+    </div>
+  );
+}
+
+function FormEntry() {
+  const [showSuccessAlert, setShowSuccessAlert] = useState(false);
+
+  const formik = useFormik({
+    initialValues: {
+      name: "",
+      email: "",
+      phoneNumber: "",
+      subject: "",
+      message: "",
+    },
+    validate,
+    onSubmit: async (values) => {
+      let data = {
+        name: values.name,
+        email: values.email,
+        phoneNumber: values.phoneNumber,
+        subject: values.phoneNumber,
+        message: values.message,
+      };
+
+      let req = await axios({
+        url: `https://formspree.io/f/${process.env.NEXT_PUBLIC_FORMSPREE_ID}`,
+        method: "post",
+        headers: {
+          Accept: "application/json",
+        },
+        data,
+      });
+      console.log(req);
+      if (req.status === 200) {
+        setShowSuccessAlert(true);
+        resetEntries();
+      }
+    },
+  });
+
+  const resetEntries = () => {
+    formik.resetForm();
+    setTimeout(() => setShowSuccessAlert(false), 5000);
+  };
+
+  return (
+    <>
+      <Alert hideAlert={!showSuccessAlert} />
+      <form
+        className={styles.ContactContentForm}
+        onSubmit={formik.handleSubmit}
+      >
+        <h2>Send us a Message</h2>
+        <div>
+          <label htmlFor="name">Your Name</label>
+          <input
+            id="name"
+            name="name"
+            onChange={formik.handleChange}
+            value={formik.values.name}
+          />
+        </div>
+        <div>
+          <label htmlFor="email">Email Address</label>
+          <input
+            id="email"
+            name="email"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.email}
+            required
+          />
+          {formik.touched.email && formik.errors.email && (
+            <span className={styles.errorMessage}>{formik.errors.email}</span>
+          )}
+        </div>
+        <div>
+          <label htmlFor="phoneNumber">Phone Number</label>
+          <input
+            id="phoneNumber"
+            name="phoneNumber"
+            onChange={formik.handleChange}
+            value={formik.values.phoneNumber}
+          />
+        </div>
+        <div>
+          <label htmlFor="subject">Subject</label>
+          <input
+            id="subject"
+            name="subject"
+            onChange={formik.handleChange}
+            value={formik.values.subject}
+          />
+        </div>
+        <div>
+          <label htmlFor="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.message}
+            rows={4}
+            minLength={20}
+            required
+          ></textarea>
+          {formik.touched.message && formik.errors.message && (
+            <span className={styles.errorMessage}>{formik.errors.message}</span>
+          )}
+        </div>
+        <Button title="Submit" isDisabled={formik.isSubmitting} />
+      </form>
+    </>
+  );
+}
+
+function Alert({ hideAlert = true }) {
+  return (
+    <div
+      className={[
+        styles.Alert,
+        hideAlert ? styles.AlertHidden : styles.AlertVisible,
+      ].join(" ")}
+    >
+      Message sent successfully
     </div>
   );
 }

@@ -36,9 +36,9 @@ export default function Subscribe() {
   );
 }
 
-export function Button({ title, value, onClick }) {
+export function Button({ title, value, onClick, isDisabled = false }) {
   return (
-    <button className={styles.Button} type="submit">
+    <button className={styles.Button} type="submit" disabled={isDisabled}>
       {title}
     </button>
   );

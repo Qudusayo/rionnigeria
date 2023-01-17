@@ -44,22 +44,22 @@
     }
   }
 
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 768px) {
     padding: 3em 0;
 
-    &Content{
+    &Content {
       flex-direction: column;
       width: 90%;
       max-width: 90%;
     }
 
-    &Header{
-      h2{
+    &Header {
+      h2 {
         font-size: 1.5em;
       }
     }
 
-    &Form{
+    &Form {
       width: 100%;
       margin-top: 2em;
     }
@@ -74,4 +74,8 @@
   background-color: $btnPrimary;
   height: 45px;
   padding: 0 3em;
+
+  &:disabled {
+    background-color: #dedede;
+  }
 }
