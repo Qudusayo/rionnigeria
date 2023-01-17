@@ -132,6 +132,21 @@
 
       p {
         line-height: 1.75em;
+        color: #38414a;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: #38414a;
+        font-weight: 700;
+
+        b {
+          font-weight: 700;
+        }
       }
 
       blockquote {
@@ -142,7 +157,7 @@
         b,
         i,
         u {
-          color: #38414a !important;
+          color: #ff0000 !important;
         }
       }
     }

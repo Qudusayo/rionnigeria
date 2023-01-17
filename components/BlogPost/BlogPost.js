@@ -3,11 +3,12 @@ import moment from "moment";
 import { HiChevronLeft } from "react-icons/hi";
 import { IoLogoFacebook } from "react-icons/io5";
 import { AiFillTwitterCircle } from "react-icons/ai";
-import styles from "./BolgPost.module.scss";
+import styles from "./BlogPost.module.scss";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { Card } from "../../pages";
 import GridLayout from "../GridLayout/GridLayout";
+import { useEffect, useState } from "react";
 
 export default function BlogPost({
   post,
@@ -17,6 +18,11 @@ export default function BlogPost({
   sector,
 }) {
   const router = useRouter();
+  const [origin, setOrigin] = useState("");
+
+  useEffect(() => {
+    setOrigin(window.location.origin);
+  }, []);
 
   return (
     <div className={styles.BlogPost}>
@@ -46,7 +52,9 @@ export default function BlogPost({
             <span>Share via: </span>
             <span>
               <a
-                href={`https://www.facebook.com/sharer/sharer.php?u=https://rionnigeria.vercel.app${router.asPath}`}
+                href={`https://www.facebook.com/sharer/sharer.php?u=${
+                  origin + router.asPath
+                }`}
                 rel="noreferrer"
                 target="_blank"
               >
@@ -55,7 +63,9 @@ export default function BlogPost({
             </span>
             <span>
               <a
-                href={`http://twitter.com/share?text=${title}&url=https://rionnigeria.vercel.app${router.asPath}`}
+                href={`http://twitter.com/share?text=${title}&url=${
+                  origin + router.asPath
+                }`}
                 rel="noreferrer"
                 target="_blank"
               >

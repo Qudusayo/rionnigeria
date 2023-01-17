@@ -1,6 +1,10 @@
 .Component {
   &Children {
     width: 90%;
-    margin: 6em auto 3em;
+    margin: 3em auto;
+
+    @media screen and (max-width: 768px) {
+      margin: 6em auto 3em;
+    }
   }
 }

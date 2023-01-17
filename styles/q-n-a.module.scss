@@ -3,9 +3,9 @@
 
 .QnA {
   &Sector {
-    width: 80%;
+    width: 90%;
     max-width: 1440px;
-    margin: 4em auto;
+    margin: 3em auto;
 
     &Title {
       font-size: 2em;
@@ -13,6 +13,7 @@
 
     &Info {
       width: 80%;
+      color: #778797;
     }
 
     &Cards {
@@ -24,6 +25,7 @@
 
     @media screen and (max-width: 768px) {
       width: 90%;
+      margin: 7.5em auto 4em;
 
       &Info{
         width: 100%;

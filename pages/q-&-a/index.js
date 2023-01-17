@@ -31,6 +31,7 @@ export default function QnA({ questionAndAnswers }) {
                 date={moment(question.fields.publishedDate).format(
                   "MMM DD, YYYY, HH:mm"
                 )}
+                contentURL={"/q-&-a/" + question.fields.slug}
                 className={styles.CardAbsolute}
               />
             );
