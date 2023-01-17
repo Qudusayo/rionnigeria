@@ -71,7 +71,7 @@ export default function Travails({ travailsOfRevertes }) {
               />
             </div>
           </div> */}
-          <GridLayout grid={4}>
+          <GridLayout lgGrid={4} mdGrid={1}>
             {travailsOfRevertes?.map((travails) => {
               return (
                 <Card

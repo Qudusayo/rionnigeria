@@ -21,5 +21,13 @@
         margin: 4em 0;
       }
     }
+
+    @media screen and (max-width: 768px) {
+      margin: 7.5em auto 4em;
+
+      &Info {
+        width: 100%;
+      }
+    }
   }
 }

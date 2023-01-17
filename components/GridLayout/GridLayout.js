@@ -1,11 +1,13 @@
-export default function GridLayout({ children, grid }) {
+import styles from "./GridLayout.module.scss";
+
+export default function GridLayout({ children, lgGrid, mdGrid }) {
   return (
     <div
-      style={{
-        display: "grid",
-        gap: "1.5em",
-        gridTemplateColumns: `repeat(${grid}, 1fr)`,
-      }}
+      className={[
+        styles.GridLayout,
+        styles["GridLayoutLg" + lgGrid],
+        styles["GridLayoutMd" + mdGrid],
+      ].join(" ")}
     >
       {children}
     </div>

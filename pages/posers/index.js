@@ -66,7 +66,7 @@ export default function Posers({ posers }) {
             </div>
           </div>
         </div>
-        <GridLayout grid={4}>
+        <GridLayout lgGrid={4} mdGrid={2}>
           {posers.slice(5)?.map((poser) => {
             return (
               <Card

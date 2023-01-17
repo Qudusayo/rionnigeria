@@ -56,7 +56,7 @@ export default function Analysis({ analysis }) {
             </div>
           </div>
         </div>
-        <GridLayout grid={4}>
+        <GridLayout lgGrid={4} mdGrid={2}>
           {analysis.slice(5)?.map((analys) => {
             return (
               <Card

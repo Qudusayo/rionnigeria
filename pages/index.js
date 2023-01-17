@@ -14,7 +14,7 @@ export default function Home() {
       <div className={styles.HomeContent}>
         <div className={styles.HomeContentSector}>
           <h2 className={styles.HomeContentSectorTitle}>Posers</h2>
-          <GridLayout grid={4}>
+          <GridLayout lgGrid={4} mdGrid={1}>
             <Card
               imageUrl="/images/dubai-skyline.webp"
               title="10 Places you can visit after your hajj"

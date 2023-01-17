@@ -65,7 +65,7 @@ export default function Rebutals({ rebuttals }) {
             </div>
           </div>
         </div>
-        <GridLayout grid={4}>
+        <GridLayout lgGrid={4} mdGrid={2}>
           {rebuttals.slice(4)?.map((rebuttal) => {
             return (
               <Card
