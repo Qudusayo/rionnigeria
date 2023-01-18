@@ -1,3 +1,9 @@
+import PageSeo from "../layout/PageSeo";
+
 export default function privacy() {
-  return <div>privacy</div>;
+  return (
+    <PageSeo title="Privacy">
+      <div>privacy</div>
+    </PageSeo>
+  );
 }

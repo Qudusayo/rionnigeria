@@ -9,6 +9,7 @@ import { Button } from "../components/Subscribe/Subscribe";
 import { FormEntryType } from "../types";
 
 import styles from "./../styles/Contact.module.scss";
+import PageSeo from "../layout/PageSeo";
 
 const validate = (values: FormEntryType) => {
   const errors: { [key: string]: string } = {};
@@ -26,49 +27,51 @@ const validate = (values: FormEntryType) => {
 
 export default function Contact() {
   return (
-    <div className={styles.Contact}>
-      <CommonHero
-        title="Contact Us"
-        info="Get in touch with us"
-        bg="/bg/contact-bg.webp"
-      />
-      <div className={styles.ContactContent}>
-        <div className={styles.ContactContentInfo}>
-          <h2>Risalatul Islamiyyat Organization of Nigeria</h2>
-          <div className={styles.ContactContentInfoDetails}>
-            <span className={styles.Icons}>
-              <FiMapPin stroke="#94CC07" strokeWidth={2} size={25} />
-            </span>
-            <div>
-              <span>Postal Address</span>
-              <p>
-                P. O. Box 22873 U.I. Post Office Ibadan,
-                <br /> Oyo State, Nigeria.
-              </p>
+    <PageSeo title="Contact Us">
+      <div className={styles.Contact}>
+        <CommonHero
+          title="Contact Us"
+          info="Get in touch with us"
+          bg="/bg/contact-bg.webp"
+        />
+        <div className={styles.ContactContent}>
+          <div className={styles.ContactContentInfo}>
+            <h2>Risalatul Islamiyyat Organization of Nigeria</h2>
+            <div className={styles.ContactContentInfoDetails}>
+              <span className={styles.Icons}>
+                <FiMapPin stroke="#94CC07" strokeWidth={2} size={25} />
+              </span>
+              <div>
+                <span>Postal Address</span>
+                <p>
+                  P. O. Box 22873 U.I. Post Office Ibadan,
+                  <br /> Oyo State, Nigeria.
+                </p>
+              </div>
+            </div>
+            <div className={styles.ContactContentInfoDetails}>
+              <span className={styles.Icons}>
+                <FiMail stroke="#FF9900" strokeWidth={2} size={25} />
+              </span>
+              <div>
+                <span>Email Address</span>
+                <p>info@rionnigeria.org</p>
+              </div>
+            </div>
+            <div className={styles.ContactContentInfoDetails}>
+              <span className={styles.Icons}>
+                <FiPhone stroke="#039341" strokeWidth={2} size={25} />
+              </span>
+              <div>
+                <span>Phone Number</span>
+                <p>+234 (805) 593 6722, +234 (802) 887 6782</p>
+              </div>
             </div>
           </div>
-          <div className={styles.ContactContentInfoDetails}>
-            <span className={styles.Icons}>
-              <FiMail stroke="#FF9900" strokeWidth={2} size={25} />
-            </span>
-            <div>
-              <span>Email Address</span>
-              <p>info@rionnigeria.org</p>
-            </div>
-          </div>
-          <div className={styles.ContactContentInfoDetails}>
-            <span className={styles.Icons}>
-              <FiPhone stroke="#039341" strokeWidth={2} size={25} />
-            </span>
-            <div>
-              <span>Phone Number</span>
-              <p>+234 (805) 593 6722, +234 (802) 887 6782</p>
-            </div>
-          </div>
+          <FormEntry />
         </div>
-        <FormEntry />
       </div>
-    </div>
+    </PageSeo>
   );
 }
 

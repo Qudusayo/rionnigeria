@@ -14,6 +14,7 @@ import "../styles/main.scss";
 import "../styles/effect-carousel.scss";
 
 import "../styles/Nprogress.scss";
+import Head from "next/head";
 
 // Router Events
 Router.events.on("routeChangeStart", () => NProgress.start());
@@ -22,9 +23,17 @@ Router.events.on("routeChangeError", () => NProgress.done());
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Main>
-      <Component {...pageProps} />
-    </Main>
+    <>
+      <Head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+        />
+      </Head>
+      <Main>
+        <Component {...pageProps} />
+      </Main>
+    </>
   );
 }
 

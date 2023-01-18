@@ -7,6 +7,7 @@ import { Card } from "..";
 import { TypeQuestionAnswers, TypeQuestionAnswersFields } from "../../types";
 
 import styles from "./../../styles/q-n-a.module.scss";
+import PageSeo from "../../layout/PageSeo";
 
 export default function QnA({
   questionAndAnswers,
@@ -14,38 +15,42 @@ export default function QnA({
   questionAndAnswers: TypeQuestionAnswers[];
 }) {
   return (
-    <div className={styles.QnA}>
-      <div>
-        <Navbar type={"solid"} />
-      </div>
-      <div className={styles.QnASector}>
-        <h2 className={styles.QnASectorTitle}>Q&A</h2>
-        <p className={styles.QnASectorInfo}>
-          Certain issues, development and topics of discussion deserve thorough
-          and critical analysis, or careful examination of such, in order to
-          clearly and genuinely understand it. Such may not be as simple as
-          their facial meanings or difficult to tackle with emotion, but needed
-          to be given a careful examination of the substance in order to find
-          out clear truth and form right opinion on it
-        </p>
-        <div className={styles.QnASectorCards}>
-          {questionAndAnswers?.map((question) => {
-            return (
-              <Card
-                key={question.sys.id}
-                imageUrl={"https:" + question.fields.thumbnail.fields.file.url}
-                title={question.fields.title}
-                date={moment(question.fields.publishedDate).format(
-                  "MMM DD, YYYY, HH:mm"
-                )}
-                contentURL={"/q-&-a/" + question.fields.slug}
-                className={styles.CardAbsolute}
-              />
-            );
-          })}
+    <PageSeo title="Questions and Answers">
+      <div className={styles.QnA}>
+        <div>
+          <Navbar type={"solid"} />
+        </div>
+        <div className={styles.QnASector}>
+          <h2 className={styles.QnASectorTitle}>Q&A</h2>
+          <p className={styles.QnASectorInfo}>
+            Certain issues, development and topics of discussion deserve
+            thorough and critical analysis, or careful examination of such, in
+            order to clearly and genuinely understand it. Such may not be as
+            simple as their facial meanings or difficult to tackle with emotion,
+            but needed to be given a careful examination of the substance in
+            order to find out clear truth and form right opinion on it
+          </p>
+          <div className={styles.QnASectorCards}>
+            {questionAndAnswers?.map((question) => {
+              return (
+                <Card
+                  key={question.sys.id}
+                  imageUrl={
+                    "https:" + question.fields.thumbnail.fields.file.url
+                  }
+                  title={question.fields.title}
+                  date={moment(question.fields.publishedDate).format(
+                    "MMM DD, YYYY, HH:mm"
+                  )}
+                  contentURL={"/q-&-a/" + question.fields.slug}
+                  className={styles.CardAbsolute}
+                />
+              );
+            })}
+          </div>
         </div>
       </div>
-    </div>
+    </PageSeo>
   );
 }
 
