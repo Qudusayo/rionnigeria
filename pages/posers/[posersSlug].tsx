@@ -1,16 +1,17 @@
 import { createClient } from "contentful";
 import BlogPost from "../../components/BlogPost/BlogPost";
 import Component from "../../layout/Component/Component";
+import { TypePoser, TypePoserFields } from "../../types";
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
   accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
 });
 
-export default function QnASlug({ qna }) {
-  if (!qna) return;
+export default function PosersSlug({ poser }: { poser: TypePoser }) {
+  if (!poser) return;
 
-  const { post, author, publishedDate, title } = qna.fields;
+  const { post, author, publishedDate, title } = poser.fields;
   return (
     <Component>
       <BlogPost
@@ -18,20 +19,20 @@ export default function QnASlug({ qna }) {
         title={title}
         author={author}
         publishedDate={publishedDate}
-        sector="Q & A"
+        sector="Posers"
       />
     </Component>
   );
 }
 
 export const getStaticPaths = async () => {
-  const response = await client.getEntries({
-    content_type: "questionAnswers",
+  const response = await client.getEntries<TypePoserFields>({
+    content_type: "poser",
   });
 
   const paths = response.items.map((item) => {
     return {
-      params: { "qna-slug": item.fields.slug },
+      params: { posersSlug: item.fields.slug },
     };
   });
 
@@ -42,9 +43,9 @@ export const getStaticPaths = async () => {
 };
 
 export async function getStaticProps({ params }) {
-  const { items } = await client.getEntries({
-    content_type: "questionAnswers",
-    "fields.slug": params["qna-slug"],
+  const { items } = await client.getEntries<TypePoserFields>({
+    content_type: "poser",
+    "fields.slug": params.posersSlug,
   });
 
   if (!items.length) {
@@ -58,7 +59,7 @@ export async function getStaticProps({ params }) {
 
   return {
     props: {
-      qna: items[0],
+      poser: items[0],
     },
     revalidate: 1,
   };

@@ -1,14 +1,17 @@
+import axios from "axios";
+import { useState } from "react";
+import { useFormik } from "formik";
 import { FiMail, FiMapPin, FiPhone } from "react-icons/fi";
+
 import CommonHero from "../components/CommonHero/CommonHero";
 import { Button } from "../components/Subscribe/Subscribe";
 
-import styles from "./../styles/Contact.module.scss";
-import { useFormik } from "formik";
-import axios from "axios";
-import { useState } from "react";
+import { FormEntryType } from "../types";
 
-const validate = (values) => {
-  const errors = {};
+import styles from "./../styles/Contact.module.scss";
+
+const validate = (values: FormEntryType) => {
+  const errors: { [key: string]: string } = {};
 
   if (!values.email) {
     errors.email = "Kindly enter a valid email";

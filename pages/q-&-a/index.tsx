@@ -1,11 +1,18 @@
-import { createClient } from "contentful";
 import moment from "moment";
-import { Card } from "..";
+import { createClient } from "contentful";
 import Navbar from "../../components/Navbar/Navbar";
+
+import { Card } from "..";
+
+import { TypeQuestionAnswers, TypeQuestionAnswersFields } from "../../types";
 
 import styles from "./../../styles/q-n-a.module.scss";
 
-export default function QnA({ questionAndAnswers }) {
+export default function QnA({
+  questionAndAnswers,
+}: {
+  questionAndAnswers: TypeQuestionAnswers[];
+}) {
   return (
     <div className={styles.QnA}>
       <div>
@@ -48,7 +55,7 @@ export async function getStaticProps() {
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
   });
 
-  const response = await client.getEntries({
+  const response = await client.getEntries<TypeQuestionAnswersFields>({
     content_type: "questionAnswers",
     select:
       "sys.id,fields.slug,fields.thumbnail,fields.title,fields.publishedDate",

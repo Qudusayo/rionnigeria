@@ -122,7 +122,7 @@ export default function BlogPost({
       </div>
       <div className={styles.BlogPostExtra}>
         <h2 className={styles.BlogPostExtraTitle}>Posers</h2>
-        <GridLayout grid={4}>
+        <GridLayout lgGrid={4}>
           <Card
             imageUrl="/images/dubai-skyline.webp"
             title="10 Places you can visit after your hajj"

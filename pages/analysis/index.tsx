@@ -1,12 +1,16 @@
-import { createClient } from "contentful";
 import moment from "moment";
+import { GetStaticProps } from "next";
+import { createClient } from "contentful";
+
 import { Card } from "..";
 import GridLayout from "../../components/GridLayout/GridLayout";
 import Component from "../../layout/Component/Component";
 
+import { TypeAnalysis, TypeAnalysisFields } from "../../types";
+
 import styles from "./../../styles/analysis.module.scss";
 
-export default function Analysis({ analysis }) {
+export default function Analysis({ analysis }: { analysis: TypeAnalysis[] }) {
   return (
     <Component>
       <div className={styles.AnalysisSector}>
@@ -77,13 +81,13 @@ export default function Analysis({ analysis }) {
   );
 }
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const client = createClient({
     space: process.env.CONTENTFUL_SPACE_ID,
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
   });
 
-  const response = await client.getEntries({
+  const response = await client.getEntries<TypeAnalysisFields>({
     content_type: "analysis",
     select:
       "sys.id,fields.slug,fields.thumbnail,fields.title,fields.publishedDate",
@@ -95,4 +99,4 @@ export async function getStaticProps() {
     },
     revalidate: 1,
   };
-}
+};

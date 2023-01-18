@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "./Subscribe.module.scss";
+import { ButtonType } from "../../types";
 
 export default function Subscribe() {
   const [email, setEmail] = useState("");
@@ -36,7 +37,12 @@ export default function Subscribe() {
   );
 }
 
-export function Button({ title, value, onClick, isDisabled = false }) {
+export function Button({
+  title,
+  value,
+  onClick,
+  isDisabled = false,
+}: ButtonType) {
   return (
     <button className={styles.Button} type="submit" disabled={isDisabled}>
       {title}

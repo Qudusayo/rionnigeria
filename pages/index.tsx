@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar/Navbar";
 import Slider from "../components/Slider/Slider";
 import GridLayout from "../components/GridLayout/GridLayout";
 import styles from "./../styles/Index.module.scss";
+import { CardType } from "../types";
 
 export default function Home() {
   return (
@@ -232,7 +233,7 @@ export function Card({
   type,
   className,
   contentURL = "/",
-}) {
+}: CardType) {
   return (
     <Link href={contentURL}>
       <div

@@ -1,16 +1,18 @@
+import { GetStaticPaths } from "next";
 import { createClient } from "contentful";
 import BlogPost from "../../components/BlogPost/BlogPost";
 import Component from "../../layout/Component/Component";
+import { TypeAnalysis, TypeAnalysisFields } from "../../types";
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
   accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
 });
 
-export default function TravailsSlug({ travail }) {
-  if (!travail) return;
+export default function AnalysisSlug({ analysis }: { analysis: TypeAnalysis }) {
+  if (!analysis) return;
 
-  const { post, author, publishedDate, title } = travail.fields;
+  const { post, author, publishedDate, title } = analysis.fields;
   return (
     <Component>
       <BlogPost
@@ -18,20 +20,20 @@ export default function TravailsSlug({ travail }) {
         title={title}
         author={author}
         publishedDate={publishedDate}
-        sector="Travails of Revertees"
+        sector="Analysis"
       />
     </Component>
   );
 }
 
-export const getStaticPaths = async () => {
-  const response = await client.getEntries({
-    content_type: "travailsOfRevertes",
+export const getStaticPaths: GetStaticPaths = async () => {
+  const response = await client.getEntries<TypeAnalysisFields>({
+    content_type: "analysis",
   });
 
   const paths = response.items.map((item) => {
     return {
-      params: { travailsSlug: item.fields.slug },
+      params: { analysisSlug: item.fields.slug },
     };
   });
 
@@ -41,10 +43,10 @@ export const getStaticPaths = async () => {
   };
 };
 
-export async function getStaticProps({ params }) {
-  const { items } = await client.getEntries({
-    content_type: "travailsOfRevertes",
-    "fields.slug": params.travailsSlug,
+export const getStaticProps = async ({ params }) => {
+  const { items } = await client.getEntries<TypeAnalysisFields>({
+    content_type: "analysis",
+    "fields.slug": params.analysisSlug,
   });
 
   if (!items.length) {
@@ -58,8 +60,8 @@ export async function getStaticProps({ params }) {
 
   return {
     props: {
-      travail: items[0],
+      analysis: items[0],
     },
     revalidate: 1,
   };
-}
+};

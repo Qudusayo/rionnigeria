@@ -3,7 +3,13 @@ import { useRouter } from "next/router";
 import styles from "./Navbar.module.scss";
 import { useEffect, useState } from "react";
 
-export default function Navbar({ className, type }) {
+export default function Navbar({
+  className,
+  type,
+}: {
+  type?: string;
+  className?: string;
+}) {
   const [visibility, setVisibility] = useState(false);
   const router = useRouter();
 
@@ -25,7 +31,7 @@ export default function Navbar({ className, type }) {
           <div className={styles.hamburger}>
             <input
               type="checkbox"
-              tabIndex="-1"
+              tabIndex={-1}
               id="checkbox"
               className={styles.hamburger_check}
               defaultChecked={visibility}

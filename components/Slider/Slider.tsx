@@ -1,7 +1,7 @@
 import { Autoplay, Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import EffectCarousel from "./effect-carousel.esm";
+import EffectCarousel from "./effect-carousel";
 
 export default function Slider() {
   return (
@@ -13,6 +13,7 @@ export default function Slider() {
         loopedSlides={5}
         slidesPerView={"auto"}
         grabCursor={true}
+        // @ts-ignore
         effect="carousel"
         autoplay={{ delay: 3000 }}
       >

@@ -1,16 +1,17 @@
 import { createClient } from "contentful";
 import BlogPost from "../../components/BlogPost/BlogPost";
 import Component from "../../layout/Component/Component";
+import { TypeRebuttal, TypeRebuttalFields } from "../../types";
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
   accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
 });
 
-export default function PosersSlug({ poser }) {
-  if (!poser) return;
+export default function RebutalsSlug({ rebuttal }: { rebuttal: TypeRebuttal }) {
+  if (!rebuttal) return;
 
-  const { post, author, publishedDate, title } = poser.fields;
+  const { post, author, publishedDate, title } = rebuttal.fields;
   return (
     <Component>
       <BlogPost
@@ -18,20 +19,20 @@ export default function PosersSlug({ poser }) {
         title={title}
         author={author}
         publishedDate={publishedDate}
-        sector="Posers"
+        sector="Rebuttals"
       />
     </Component>
   );
 }
 
 export const getStaticPaths = async () => {
-  const response = await client.getEntries({
-    content_type: "poser",
+  const response = await client.getEntries<TypeRebuttalFields>({
+    content_type: "rebuttal",
   });
 
   const paths = response.items.map((item) => {
     return {
-      params: { posersSlug: item.fields.slug },
+      params: { rebuttalsSlug: item.fields.slug },
     };
   });
 
@@ -42,9 +43,9 @@ export const getStaticPaths = async () => {
 };
 
 export async function getStaticProps({ params }) {
-  const { items } = await client.getEntries({
-    content_type: "poser",
-    "fields.slug": params.posersSlug,
+  const { items } = await client.getEntries<TypeRebuttalFields>({
+    content_type: "rebuttal",
+    "fields.slug": params.rebuttalsSlug,
   });
 
   if (!items.length) {
@@ -58,7 +59,7 @@ export async function getStaticProps({ params }) {
 
   return {
     props: {
-      poser: items[0],
+      rebuttal: items[0],
     },
     revalidate: 1,
   };

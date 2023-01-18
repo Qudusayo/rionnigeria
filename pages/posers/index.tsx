@@ -2,7 +2,6 @@ import { createClient } from "contentful";
 import moment from "moment";
 import { Card } from "..";
 import GridLayout from "../../components/GridLayout/GridLayout";
-import Navbar from "../../components/Navbar/Navbar";
 import Component from "../../layout/Component/Component";
 import styles from "./../../styles/posers.module.scss";
 

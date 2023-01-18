@@ -5,8 +5,16 @@ import GridLayout from "../../components/GridLayout/GridLayout";
 import Component from "../../layout/Component/Component";
 
 import styles from "./../../styles/travails.module.scss";
+import {
+  TypeTravailsOfRevertes,
+  TypeTravailsOfRevertesFields,
+} from "../../types";
 
-export default function Travails({ travailsOfRevertes }) {
+export default function Travails({
+  travailsOfRevertes,
+}: {
+  travailsOfRevertes: TypeTravailsOfRevertes[];
+}) {
   return (
     <Component>
       <div className={styles.TravailsSector}>
@@ -101,7 +109,7 @@ export async function getStaticProps() {
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
   });
 
-  const response = await client.getEntries({
+  const response = await client.getEntries<TypeTravailsOfRevertesFields>({
     content_type: "travailsOfRevertes",
     select:
       "sys.id,fields.slug,fields.thumbnail,fields.title,fields.publishedDate",

@@ -1,16 +1,24 @@
 import { createClient } from "contentful";
 import BlogPost from "../../components/BlogPost/BlogPost";
 import Component from "../../layout/Component/Component";
+import {
+  TypeTravailsOfRevertes,
+  TypeTravailsOfRevertesFields,
+} from "../../types";
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
   accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
 });
 
-export default function RebutalsSlug({ rebuttal }) {
-  if (!rebuttal) return;
+export default function TravailsSlug({
+  travail,
+}: {
+  travail: TypeTravailsOfRevertes;
+}) {
+  if (!travail) return;
 
-  const { post, author, publishedDate, title } = rebuttal.fields;
+  const { post, author, publishedDate, title } = travail.fields;
   return (
     <Component>
       <BlogPost
@@ -18,20 +26,20 @@ export default function RebutalsSlug({ rebuttal }) {
         title={title}
         author={author}
         publishedDate={publishedDate}
-        sector="Rebuttals"
+        sector="Travails of Revertees"
       />
     </Component>
   );
 }
 
 export const getStaticPaths = async () => {
-  const response = await client.getEntries({
-    content_type: "rebuttal",
+  const response = await client.getEntries<TypeTravailsOfRevertesFields>({
+    content_type: "travailsOfRevertes",
   });
 
   const paths = response.items.map((item) => {
     return {
-      params: { rebuttalsSlug: item.fields.slug },
+      params: { travailsSlug: item.fields.slug },
     };
   });
 
@@ -42,9 +50,9 @@ export const getStaticPaths = async () => {
 };
 
 export async function getStaticProps({ params }) {
-  const { items } = await client.getEntries({
-    content_type: "rebuttal",
-    "fields.slug": params.rebuttalsSlug,
+  const { items } = await client.getEntries<TypeTravailsOfRevertesFields>({
+    content_type: "travailsOfRevertes",
+    "fields.slug": params.travailsSlug,
   });
 
   if (!items.length) {
@@ -58,7 +66,7 @@ export async function getStaticProps({ params }) {
 
   return {
     props: {
-      rebuttal: items[0],
+      travail: items[0],
     },
     revalidate: 1,
   };

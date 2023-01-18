@@ -5,8 +5,9 @@ import GridLayout from "../../components/GridLayout/GridLayout";
 import Component from "../../layout/Component/Component";
 
 import styles from "./../../styles/rebutals.module.scss";
+import { TypeRebuttal, TypeRebuttalFields } from "../../types";
 
-export default function Rebutals({ rebuttals }) {
+export default function Rebutals({ rebuttals }: { rebuttals: TypeRebuttal[] }) {
   return (
     <Component>
       <div className={styles.RebutalsSector}>
@@ -92,7 +93,7 @@ export async function getStaticProps() {
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
   });
 
-  const response = await client.getEntries({
+  const response = await client.getEntries<TypeRebuttalFields>({
     content_type: "rebuttal",
     select:
       "sys.id,fields.slug,fields.thumbnail,fields.title,fields.publishedDate",
