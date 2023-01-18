@@ -16,6 +16,7 @@ export default function Slider() {
         // @ts-ignore
         effect="carousel"
         autoplay={{ delay: 3000 }}
+        init={true}
       >
         <SwiperSlide>
           <div className="swiper-carousel-animate-opacity">
