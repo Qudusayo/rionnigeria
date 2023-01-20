@@ -15,8 +15,9 @@
   &Date {
     display: block;
     margin: 0.75em 0;
+
     span {
-      color: darken($color: $txtNeutral, $amount: 20%);
+      color: #475569;
     }
   }
 

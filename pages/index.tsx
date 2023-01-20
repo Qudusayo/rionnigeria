@@ -8,7 +8,7 @@ import PageSeo from "../layout/PageSeo";
 
 export default function Home() {
   return (
-    <PageSeo title="WELCOME">
+    <PageSeo title="WELCOME" description="RION Nigeria">
       <div className={styles.Home}>
         <div>
           <Navbar type={"solid"} />

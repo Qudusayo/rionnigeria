@@ -16,7 +16,7 @@
         font-family: $fontMedium;
         font-weight: 500;
         font-size: 2em;
-        margin-bottom: .5em;
+        margin-bottom: 0.5em;
       }
 
       .PosersSector {
@@ -146,6 +146,7 @@
       border-radius: 5px;
       color: $white;
       background-color: $btnPrimary;
+      margin-top: 1em;
       height: 40px;
       padding: 0 2em;
     }

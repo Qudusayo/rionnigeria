@@ -36,18 +36,18 @@ export default function Navbar({
             objectFit="contain"
           />
           <div className={styles.hamburger}>
-            <input
-              type="checkbox"
-              id="checkbox"
-              className={styles.hamburger_check}
-              defaultChecked={visibility}
-              onChange={() => setVisibility((visibility) => !visibility)}
-            />
             <label htmlFor="checkbox">
               <span className={styles.hamburger_bars}></span>
               <span className={styles.hamburger_bars}></span>
               <span className={styles.hamburger_bars}></span>
             </label>
+            <input
+              id="checkbox"
+              type="checkbox"
+              className={styles.hamburger_check}
+              defaultChecked={visibility}
+              onChange={() => setVisibility((visibility) => !visibility)}
+            />
           </div>
         </div>
         <ul className={visibility ? styles.visibleNav : styles.inVisibleNav}>
