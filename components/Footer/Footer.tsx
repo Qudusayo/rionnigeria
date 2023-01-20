@@ -1,13 +1,20 @@
 import { RiFacebookCircleFill, RiTwitterFill } from "react-icons/ri";
 import Link from "next/link";
 import styles from "./Footer.module.scss";
+import Image from "next/image";
 
 export default function Footer() {
   return (
     <div className={styles.Footer}>
       <div className={styles.FooterData}>
         <div>
-          <img src="/footer-logo.svg" alt="logo" />
+          <Image
+            src="/footer-logo.svg"
+            alt="logo"
+            width={250}
+            height={80}
+            objectFit="contain"
+          />
           <p>
             Our mission is to establish and provide for humanity, Muslims and
             non-Muslims alike, the veracity of Islam as the only faith by which
@@ -64,14 +71,19 @@ export default function Footer() {
         <div>
           <h2>Legals</h2>
           <ul>
-            <li>Privacy Policy</li>
-            <li>Terms and Condition</li>
+            <li>
+              <span>Privacy Policy</span>
+            </li>
+            <li>
+              <span>Terms and Condition</span>
+            </li>
           </ul>
         </div>
         <div>
           <h2>Socials</h2>
           <a
             href="https://twitter.com/rionnigeria"
+            aria-label="RION Nigeria twitter Page"
             target="_blank"
             rel="noreferrer"
           >
@@ -83,6 +95,7 @@ export default function Footer() {
           </a>
           <a
             href="https://web.facebook.com/rionnigeriahq"
+            aria-label="RION Nigeria Facebook Page"
             target="_blank"
             rel="noreferrer"
           >

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import styles from "./Navbar.module.scss";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export default function Navbar({
   className,
@@ -27,11 +28,16 @@ export default function Navbar({
     >
       <div className={styles.NavbarContent}>
         <div className={styles.NavbarContentHeader}>
-          <img src="/logo.svg" alt="logo" />
+          <Image
+            src="/logo.svg"
+            alt="logo"
+            width={40}
+            height={40}
+            objectFit="contain"
+          />
           <div className={styles.hamburger}>
             <input
               type="checkbox"
-              tabIndex={-1}
               id="checkbox"
               className={styles.hamburger_check}
               defaultChecked={visibility}

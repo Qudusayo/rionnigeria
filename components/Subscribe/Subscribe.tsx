@@ -26,6 +26,7 @@ export default function Subscribe() {
         >
           <label htmlFor="email">Email Address</label>
           <input
+            id="email"
             type={"email"}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
