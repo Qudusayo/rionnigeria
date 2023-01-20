@@ -24,9 +24,9 @@ export default function Subscribe() {
           onSubmit={emailSubmissionHandler}
           className={styles.SubscribeForm}
         >
-          <label htmlFor="email">Email Address</label>
+          <label htmlFor="subscribeEmail">Email Address</label>
           <input
-            id="email"
+            id="subscribeEmail"
             type={"email"}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
