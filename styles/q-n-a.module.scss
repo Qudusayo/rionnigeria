@@ -27,10 +27,19 @@
       width: 90%;
       margin: 7.5em auto 4em;
 
-      &Info{
+      &Info {
         width: 100%;
       }
 
+      &Cards {
+        margin-top: 2em;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1em;
+      }
+    }
+
+    @media screen and (max-width: 425px) {
       &Cards {
         margin-top: 2em;
         display: grid;

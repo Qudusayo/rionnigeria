@@ -22,6 +22,15 @@
     position: absolute;
     top: 0.95em;
   }
+
+  @media screen and (max-width: 768px) {
+    min-height: 60vh;
+    margin-top: 4.75em;
+
+    h1 {
+      display: none;
+    }
+  }
 }
 
 // // Custom styles for demo

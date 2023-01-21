@@ -39,6 +39,26 @@
     div {
       flex: 1;
     }
+
+    @media screen and (max-width: 768px) {
+      img {
+        width: 50%;
+        height: 20em;
+      }
+
+      div {
+        flex: 1;
+        width: 50%;
+
+        p {
+          display: -webkit-box;
+          -webkit-line-clamp: 8;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
   }
 
   &FlexRight {
@@ -54,6 +74,26 @@
 
     div {
       flex: 1;
+    }
+
+    @media screen and (max-width: 768px) {
+      img {
+        width: 50%;
+        height: 20em;
+      }
+
+      div {
+        flex: 1;
+        width: 50%;
+
+        p {
+          display: -webkit-box;
+          -webkit-line-clamp: 8;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
     }
   }
 
