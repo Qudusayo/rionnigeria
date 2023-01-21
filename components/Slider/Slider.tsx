@@ -2,6 +2,7 @@ import { Autoplay, Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import EffectCarousel from "./effect-carousel";
+import Image from "next/image";
 
 export default function Slider() {
   return (
@@ -20,10 +21,12 @@ export default function Slider() {
       >
         <SwiperSlide>
           <div className="swiper-carousel-animate-opacity">
-            <img
+            <Image
               src={"/bg/about-bg.webp"}
-              width="400px"
-              height="400px"
+              className="image"
+              width={1200}
+              height={1200}
+              objectFit="cover"
               alt="slider"
             />
             <div className="slide-content">
@@ -37,10 +40,12 @@ export default function Slider() {
         </SwiperSlide>
         <SwiperSlide>
           <div className="swiper-carousel-animate-opacity">
-            <img
+            <Image
               src={"/bg/activities-bg.webp"}
-              width="400px"
-              height="400px"
+              className="image"
+              width={1200}
+              height={1200}
+              objectFit="cover"
               alt="slider"
             />
             <div className="slide-content">
@@ -56,10 +61,12 @@ export default function Slider() {
         </SwiperSlide>
         <SwiperSlide>
           <div className="swiper-carousel-animate-opacity">
-            <img
+            <Image
               src={"/bg/contact-bg.webp"}
-              width="400px"
-              height="400px"
+              className="image"
+              width={1200}
+              height={1200}
+              objectFit="cover"
               alt="slider"
             />
             <div className="slide-content">
@@ -74,10 +81,12 @@ export default function Slider() {
         </SwiperSlide>
         <SwiperSlide>
           <div className="swiper-carousel-animate-opacity">
-            <img
+            <Image
               src={"/images/mosque.webp"}
-              width="400px"
-              height="400px"
+              className="image"
+              width={1200}
+              height={1200}
+              objectFit="cover"
               alt="slider"
             />
             <div className="slide-content">
@@ -93,10 +102,12 @@ export default function Slider() {
         </SwiperSlide>
         <SwiperSlide>
           <div className="swiper-carousel-animate-opacity">
-            <img
+            <Image
               src={"/images/library.webp"}
-              width="400px"
-              height="400px"
+              className="image"
+              width={1200}
+              height={1200}
+              objectFit="cover"
               alt="slider"
             />
             <div className="slide-content">
@@ -111,10 +122,12 @@ export default function Slider() {
         </SwiperSlide>
         <SwiperSlide>
           <div className="swiper-carousel-animate-opacity">
-            <img
+            <Image
               src={"/images/school.webp"}
-              width="400px"
-              height="400px"
+              className="image"
+              width={1200}
+              height={1200}
+              objectFit="cover"
               alt="slider"
             />
             <div className="slide-content">

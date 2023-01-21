@@ -58,10 +58,6 @@
     font-size: 20em;
   }
 
-  .swiper-carousel-animate-opacity {
-    height: 100%;
-  }
-
   .swiper-pagination-bullets {
     bottom: 0;
   }
@@ -74,6 +70,16 @@
     border-radius: 8px;
     // prettier-ignore
     -webkit-box-reflect: below 5px -webkit-linear-gradient(bottom,rgba(255,0,0,0.1) 0%,transparent 32px,transparent 100%);
+  }
+
+  .swiper-carousel-animate-opacity {
+    height: 100%;
+
+    span {
+      display: block !important;
+      width: 100% !important;
+      height: 100% !important;
+    }
   }
 
   .slide-content {
