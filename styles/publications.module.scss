@@ -1,0 +1,46 @@
+.Publications {
+  &SectorTitle {
+    font-size: 2em;
+
+    &:nth-of-type(1) {
+      margin: 1.5em 0;
+    }
+  }
+
+  &Shelve {
+    display: grid;
+    gap: 1.5em;
+    grid-template-columns: repeat(4, 1fr);
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+.BookDisplayCard {
+  text-align: center;
+  border-radius: 7px;
+  padding: 2em 1em;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+  h2 {
+    margin-top: 0.5em !important;
+    font-size: 0.95em;
+  }
+
+  p {
+    font-size: 0.85em;
+    margin: 0.5em !important;
+  }
+
+  span {
+    font-size: 0.85em;
+  }
+
+  h2,
+  p {
+    margin: 0;
+  }
+}
