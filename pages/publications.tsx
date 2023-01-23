@@ -2,15 +2,122 @@ import Component from "../layout/Component/Component";
 import PageSeo from "../layout/PageSeo";
 import styles from "./../styles/publications.module.scss";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation } from "swiper";
+
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Button } from "../components/Subscribe/Subscribe";
+
 export default function Publications() {
   return (
     <PageSeo title="Publications">
       <Component>
         <div className={styles.Publications}>
-          <h2 className={styles.PublicationsSectorTitle}>Top Publications</h2>
+          <h2 className={styles.PublicationsSectorMainTitle}>
+            Top Publications
+          </h2>
           <p className={styles.PublicationsSectorInfo}>
             Some of the best books for this week
           </p>
+        </div>
+        <div>
+          <>
+            <Swiper
+              slidesPerView={2.5}
+              spaceBetween={30}
+              centeredSlides={true}
+              navigation={true}
+              pagination={{
+                clickable: true,
+              }}
+              modules={[Navigation]}
+              className="mySwiper"
+            >
+              <SwiperSlide>
+                <BookDisplayCard
+                  image="/book.svg"
+                  type="carousel"
+                  title="THE SECRET OF OUR IMAMS"
+                  author="K.R. Ayoola, K.R. Ayoola"
+                  year={"2020"}
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <BookDisplayCard
+                  image="/book.svg"
+                  type="carousel"
+                  title="THE SECRET OF OUR IMAMS"
+                  author="K.R. Ayoola, K.R. Ayoola"
+                  year={"2020"}
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <BookDisplayCard
+                  image="/book.svg"
+                  type="carousel"
+                  title="THE SECRET OF OUR IMAMS"
+                  author="K.R. Ayoola, K.R. Ayoola"
+                  year={"2020"}
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <BookDisplayCard
+                  image="/book.svg"
+                  type="carousel"
+                  title="THE SECRET OF OUR IMAMS"
+                  author="K.R. Ayoola, K.R. Ayoola"
+                  year={"2020"}
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <BookDisplayCard
+                  image="/book.svg"
+                  type="carousel"
+                  title="THE SECRET OF OUR IMAMS"
+                  author="K.R. Ayoola, K.R. Ayoola"
+                  year={"2020"}
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <BookDisplayCard
+                  image="/book.svg"
+                  type="carousel"
+                  title="THE SECRET OF OUR IMAMS"
+                  author="K.R. Ayoola, K.R. Ayoola"
+                  year={"2020"}
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <BookDisplayCard
+                  image="/book.svg"
+                  type="carousel"
+                  title="THE SECRET OF OUR IMAMS"
+                  author="K.R. Ayoola, K.R. Ayoola"
+                  year={"2020"}
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <BookDisplayCard
+                  image="/book.svg"
+                  type="carousel"
+                  title="THE SECRET OF OUR IMAMS"
+                  author="K.R. Ayoola, K.R. Ayoola"
+                  year={"2020"}
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <BookDisplayCard
+                  image="/book.svg"
+                  type="carousel"
+                  title="THE SECRET OF OUR IMAMS"
+                  author="K.R. Ayoola, K.R. Ayoola"
+                  year={"2020"}
+                />
+              </SwiperSlide>
+            </Swiper>
+          </>
         </div>
 
         <h2 className={styles.PublicationsSectorTitle}>Browse Our Books</h2>
@@ -20,6 +127,7 @@ export default function Publications() {
             .map((_, index) => (
               <BookDisplayCard
                 key={index}
+                type="block"
                 image="/book.svg"
                 title="THE SECRET OF OUR IMAMS"
                 author="K.R. Ayoola, K.R. Ayoola"
@@ -46,11 +154,17 @@ const BookDisplayCard = ({
   type?: "carousel" | "block";
 }) => {
   return (
-    <div className={styles.BookDisplayCard}>
+    <div
+      className={[
+        styles.BookDisplayCard,
+        type === "carousel" && styles.CarouselCard,
+      ].join(" ")}
+    >
       <img src={image} alt={title} />
       <h2>{title}</h2>
       <p>{author}</p>
-      <span>{year}</span>
+      {type === "block" && <span>{year}</span>}
+      {type === "carousel" && <Button title="Download" />}
     </div>
   );
 };
