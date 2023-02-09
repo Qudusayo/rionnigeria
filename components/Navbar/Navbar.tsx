@@ -36,11 +36,6 @@ export default function Navbar({
             objectFit="contain"
           />
           <div className={styles.hamburger}>
-            <label htmlFor="checkbox">
-              <span className={styles.hamburger_bars}></span>
-              <span className={styles.hamburger_bars}></span>
-              <span className={styles.hamburger_bars}></span>
-            </label>
             <input
               id="checkbox"
               type="checkbox"
@@ -48,6 +43,11 @@ export default function Navbar({
               defaultChecked={visibility}
               onChange={() => setVisibility((visibility) => !visibility)}
             />
+            <label htmlFor="checkbox">
+              <span className={styles.hamburger_bars}></span>
+              <span className={styles.hamburger_bars}></span>
+              <span className={styles.hamburger_bars}></span>
+            </label>
           </div>
         </div>
         <ul className={visibility ? styles.visibleNav : styles.inVisibleNav}>
