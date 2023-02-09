@@ -1,6 +1,7 @@
 import Component from "../layout/Component/Component";
 import PageSeo from "../layout/PageSeo";
 import styles from "./../styles/publications.module.scss";
+import { MdChevronRight, MdChevronLeft } from "react-icons/md";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Pagination, Navigation } from "swiper";
@@ -9,8 +10,12 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Button } from "../components/Subscribe/Subscribe";
+import { useRef } from "react";
 
 export default function Publications() {
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
+
   return (
     <PageSeo title="Publications">
       <Component>
@@ -28,13 +33,20 @@ export default function Publications() {
               slidesPerView={"auto"}
               spaceBetween={30}
               // centeredSlides={true}
-              navigation={true}
               pagination={{
                 clickable: true,
               }}
               freeMode={true}
               modules={[Navigation, Pagination, FreeMode]}
               className="mySwiper"
+              onInit={(swiper) => {
+                // @ts-ignore
+                swiper.params.navigation.prevEl = prevRef.current;
+                // @ts-ignore
+                swiper.params.navigation.nextEl = nextRef.current;
+                swiper.navigation.init();
+                swiper.navigation.update();
+              }}
             >
               <SwiperSlide>
                 <BookDisplayCard
@@ -117,6 +129,12 @@ export default function Publications() {
                   year={"2020"}
                 />
               </SwiperSlide>
+              <div className={styles.SliderPrevBtn} ref={prevRef}>
+                <MdChevronLeft />
+              </div>
+              <div className={styles.SliderNextBtn} ref={nextRef}>
+                <MdChevronRight />
+              </div>
             </Swiper>
           </>
         </div>
