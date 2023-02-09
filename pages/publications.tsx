@@ -3,7 +3,7 @@ import PageSeo from "../layout/PageSeo";
 import styles from "./../styles/publications.module.scss";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper";
+import { FreeMode, Pagination, Navigation } from "swiper";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -22,17 +22,18 @@ export default function Publications() {
             Some of the best books for this week
           </p>
         </div>
-        <div>
+        <div className="publicationsSwiperCard">
           <>
             <Swiper
-              slidesPerView={2.5}
+              slidesPerView={"auto"}
               spaceBetween={30}
-              centeredSlides={true}
+              // centeredSlides={true}
               navigation={true}
               pagination={{
                 clickable: true,
               }}
-              modules={[Navigation]}
+              freeMode={true}
+              modules={[Navigation, Pagination, FreeMode]}
               className="mySwiper"
             >
               <SwiperSlide>

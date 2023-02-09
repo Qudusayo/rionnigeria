@@ -47,6 +47,8 @@
   position: relative;
   padding-left: 10em;
   text-align: left;
+  width: fit-content;
+  min-width: 420px;
 
   img {
     position: absolute;
@@ -55,4 +57,3 @@
     width: 15em;
   }
 }
-
