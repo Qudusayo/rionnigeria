@@ -8,7 +8,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import { Card } from "../../pages";
 import GridLayout from "../GridLayout/GridLayout";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import HeadSeo from "../HeadSeo/HeadSeo";
 import siteMetadata from "../../data/siteMetadata";
 
@@ -21,6 +21,10 @@ export default function BlogPost({
 }) {
   const router = useRouter();
   const [origin, setOrigin] = useState("");
+
+  useEffect(() => {
+    setOrigin(window.location.origin);
+  }, []);
 
   return (
     <>

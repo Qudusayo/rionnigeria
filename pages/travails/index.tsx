@@ -19,34 +19,32 @@ export default function Travails({
   return (
     <PageSeo title="Travails of Reverts">
       <Component>
-        <div className={styles.TravailsSector}>
-          <h2 className={styles.TravailsSectorTitle}>Travails of Reverts</h2>
-          <p className={styles.TravailsSectorInfo}>
-            It is reported in the Bukhariy hadith that the Prophet said:{" "}
-            <b>
-              &ldquo;Every Child is born with a correct nature of Islamic
-              submission, but his parents later make him a Jew or a Christian or
-              a Magian.&rdquo;
-            </b>{" "}
-            Many people born outside Islam as a result of parental and/or
-            societal factors have one way or the other retraced their steps back
-            to their natural faith, they have claimed back their birthright by
-            reverting to Islam and have been enjoying the best tranquillity of
-            life with unshakeable hope of salvation in the Hereafter. We bring
-            to you from{" "}
-            <b>
-              <u>books/magazines, websites, and personal contacts</u>
-            </b>
-            , the travails of some lucky and reasonable people who are not
-            tantalized with fake promises offered by custodians of empty faiths!
-            Your experience or those you know is highly welcome.
-            <br />
-            <br />
-            Send to our e-mail address (info@rionnigeria.org), if possible with
-            full information/identities. Thanks!
-          </p>
-          <div className={styles.TravailsSectorContent}>
-            {/* <div className={styles.FlexImageColumn}>
+        <h2 className={styles.TravailsSectorTitle}>Travails of Reverts</h2>
+        <p className={styles.TravailsSectorInfo}>
+          It is reported in the Bukhariy hadith that the Prophet said:{" "}
+          <b>
+            &ldquo;Every Child is born with a correct nature of Islamic
+            submission, but his parents later make him a Jew or a Christian or a
+            Magian.&rdquo;
+          </b>{" "}
+          Many people born outside Islam as a result of parental and/or societal
+          factors have one way or the other retraced their steps back to their
+          natural faith, they have claimed back their birthright by reverting to
+          Islam and have been enjoying the best tranquillity of life with
+          unshakeable hope of salvation in the Hereafter. We bring to you from{" "}
+          <b>
+            <u>books/magazines, websites, and personal contacts</u>
+          </b>
+          , the travails of some lucky and reasonable people who are not
+          tantalized with fake promises offered by custodians of empty faiths!
+          Your experience or those you know is highly welcome.
+          <br />
+          <br />
+          Send to our e-mail address (info@rionnigeria.org), if possible with
+          full information/identities. Thanks!
+        </p>
+        <div className={styles.TravailsSectorContent}>
+          {/* <div className={styles.FlexImageColumn}>
             <div className={styles.FlexImageColumnMain}>
               <Card
                 imageUrl="https://www.arabianbusiness.com/cloud/2022/07/18/dubai-skyline.webp"
@@ -82,25 +80,24 @@ export default function Travails({
               />
             </div>
           </div> */}
-            <GridLayout lgGrid={4} mdGrid={1}>
-              {travailsOfRevertes?.map((travails) => {
-                return (
-                  <Card
-                    key={travails.sys.id}
-                    imageUrl={
-                      "https:" + travails.fields.thumbnail.fields.file.url
-                    }
-                    contentURL={"/travails/" + travails.fields.slug}
-                    title={travails.fields.title}
-                    date={moment(travails.fields.publishedDate).format(
-                      "MMM DD, YYYY, HH:mm"
-                    )}
-                    className={styles.CardAbsolute}
-                  />
-                );
-              })}
-            </GridLayout>
-          </div>
+          <GridLayout lgGrid={4} mdGrid={1}>
+            {travailsOfRevertes?.map((travails) => {
+              return (
+                <Card
+                  key={travails.sys.id}
+                  imageUrl={
+                    "https:" + travails.fields.thumbnail.fields.file.url
+                  }
+                  contentURL={"/travails/" + travails.fields.slug}
+                  title={travails.fields.title}
+                  date={moment(travails.fields.publishedDate).format(
+                    "MMM DD, YYYY, HH:mm"
+                  )}
+                  className={styles.CardAbsolute}
+                />
+              );
+            })}
+          </GridLayout>
         </div>
       </Component>
     </PageSeo>

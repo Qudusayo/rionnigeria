@@ -15,7 +15,6 @@ export default function Analysis({ analysis }: { analysis: TypeAnalysis[] }) {
   return (
     <PageSeo title="Analysis">
       <Component>
-        <div className={styles.AnalysisSector}>
           <h2 className={styles.AnalysisSectorTitle}>Analysis</h2>
           <p className={styles.AnalysisSectorInfo}>
             Certain issues, development and topics of discussion deserve
@@ -78,7 +77,6 @@ export default function Analysis({ analysis }: { analysis: TypeAnalysis[] }) {
               );
             })}
           </GridLayout>
-        </div>
       </Component>
     </PageSeo>
   );
