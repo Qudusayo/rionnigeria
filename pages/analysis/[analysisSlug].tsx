@@ -15,13 +15,7 @@ export default function AnalysisSlug({ analysis }: { analysis: TypeAnalysis }) {
   const { post, author, publishedDate, title } = analysis.fields;
   return (
     <Component>
-      <BlogPost
-        post={post}
-        title={title}
-        author={author}
-        publishedDate={publishedDate}
-        sector="Analysis"
-      />
+      <BlogPost post={post} title={title} author={author} publishedDate={publishedDate} sector="Analysis" />
     </Component>
   );
 }

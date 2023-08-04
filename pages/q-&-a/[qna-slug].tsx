@@ -14,13 +14,7 @@ export default function QnASlug({ qna }: { qna: TypeQuestionAnswers }) {
   const { post, author, publishedDate, title } = qna.fields;
   return (
     <Component>
-      <BlogPost
-        post={post}
-        title={title}
-        author={author}
-        publishedDate={publishedDate}
-        sector="Q & A"
-      />
+      <BlogPost post={post} title={title} author={author} publishedDate={publishedDate} sector="Q & A" />
     </Component>
   );
 }

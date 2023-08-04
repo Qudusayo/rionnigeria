@@ -10,13 +10,7 @@ export default function GridLayout({
   mdGrid?: number;
 }) {
   return (
-    <div
-      className={[
-        styles.GridLayout,
-        styles["GridLayoutLg" + lgGrid],
-        styles["GridLayoutMd" + mdGrid],
-      ].join(" ")}
-    >
+    <div className={[styles.GridLayout, styles["GridLayoutLg" + lgGrid], styles["GridLayoutMd" + mdGrid]].join(" ")}>
       {children}
     </div>
   );

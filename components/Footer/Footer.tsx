@@ -8,18 +8,11 @@ export default function Footer() {
     <div className={styles.Footer}>
       <div className={styles.FooterData}>
         <div>
-          <Image
-            src="/footer-logo.svg"
-            alt="logo"
-            width={250}
-            height={80}
-            objectFit="contain"
-          />
+          <Image src="/footer-logo.svg" alt="logo" width={250} height={80} objectFit="contain" />
           <p>
-            Our mission is to establish and provide for humanity, Muslims and
-            non-Muslims alike, the veracity of Islam as the only faith by which
-            man can lead a true upright and pure life, attain genuine peace and
-            salvation and be assured of Blissfull Janat as promised by Allah.
+            Our mission is to establish and provide for humanity, Muslims and non-Muslims alike, the veracity of Islam
+            as the only faith by which man can lead a true upright and pure life, attain genuine peace and salvation and
+            be assured of Blissfull Janat as promised by Allah.
           </p>
         </div>
         <div>
@@ -87,11 +80,7 @@ export default function Footer() {
             target="_blank"
             rel="noreferrer"
           >
-            <RiTwitterFill
-              size={30}
-              fill="#98A2B3"
-              className={styles.FooterIcon}
-            />
+            <RiTwitterFill size={30} fill="#98A2B3" className={styles.FooterIcon} />
           </a>
           <a
             href="https://web.facebook.com/rionnigeriahq"
@@ -99,17 +88,12 @@ export default function Footer() {
             target="_blank"
             rel="noreferrer"
           >
-            <RiFacebookCircleFill
-              size={30}
-              fill="#98A2B3"
-              className={styles.FooterIcon}
-            />
+            <RiFacebookCircleFill size={30} fill="#98A2B3" className={styles.FooterIcon} />
           </a>
         </div>
       </div>
       <span className={styles.FooterCopyRight}>
-        Copyright &copy; {new Date().getFullYear()} RION Nigeria. All Rights
-        Reserved
+        Copyright &copy; {new Date().getFullYear()} RION Nigeria. All Rights Reserved
       </span>
     </div>
   );

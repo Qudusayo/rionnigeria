@@ -136,14 +136,7 @@
   }
 
   .Ad {
-    background: linear-gradient(
-        to right,
-        #000000,
-        transparent,
-        transparent,
-        transparent
-      ),
-      url("./../public/ad.webp");
+    background: linear-gradient(to right, #000000, transparent, transparent, transparent), url("./../public/ad.webp");
     background-size: cover;
     background-position: center;
     border-radius: 12px;

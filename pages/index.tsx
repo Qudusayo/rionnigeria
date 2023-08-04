@@ -41,9 +41,7 @@ export default function Home() {
             </GridLayout>
           </div>
           <div className={styles.HomeContentSector}>
-            <h2 className={styles.HomeContentSectorTitle}>
-              Travails of Reverts
-            </h2>
+            <h2 className={styles.HomeContentSectorTitle}>Travails of Reverts</h2>
             <div className={styles.FlexImageColumn}>
               <div className={styles.FlexImageColumnMain}>
                 <Card
@@ -138,34 +136,16 @@ export default function Home() {
                 />
               </div>
               <div className={styles.FlexLeftNoImgCardExtra}>
-                <Card
-                  className={styles.rCard}
-                  title="10 Places you can visit after your hajj"
-                  date="Mon, 15th Aug."
-                />
-                <Card
-                  className={styles.rCard}
-                  title="10 Places you can visit after your hajj"
-                  date="Mon, 15th Aug."
-                />
-                <Card
-                  className={styles.rCard}
-                  title="10 Places you can visit after your hajj"
-                  date="Mon, 15th Aug."
-                />
-                <Card
-                  className={styles.rCard}
-                  title="10 Places you can visit after your hajj"
-                  date="Mon, 15th Aug."
-                />
+                <Card className={styles.rCard} title="10 Places you can visit after your hajj" date="Mon, 15th Aug." />
+                <Card className={styles.rCard} title="10 Places you can visit after your hajj" date="Mon, 15th Aug." />
+                <Card className={styles.rCard} title="10 Places you can visit after your hajj" date="Mon, 15th Aug." />
+                <Card className={styles.rCard} title="10 Places you can visit after your hajj" date="Mon, 15th Aug." />
               </div>
             </div>
           </div>
 
           <div className={styles.HomeContentSector}>
-            <h2 className={styles.HomeContentSectorTitle}>
-              Questions & Answers
-            </h2>
+            <h2 className={styles.HomeContentSectorTitle}>Questions & Answers</h2>
             <div className={styles.QnASector}>
               <div className={styles.QnASectorMain}>
                 <Card
@@ -232,15 +212,7 @@ export default function Home() {
   );
 }
 
-export function Card({
-  imageUrl,
-  title,
-  date,
-  summary,
-  type,
-  className,
-  contentURL = "/",
-}: CardType) {
+export function Card({ imageUrl, title, date, summary, type, className, contentURL = "/" }: CardType) {
   return (
     <Link href={contentURL}>
       <div

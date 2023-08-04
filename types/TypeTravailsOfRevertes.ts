@@ -11,5 +11,4 @@ export interface TypeTravailsOfRevertesFields {
   post: CFRichTextTypes.Block | CFRichTextTypes.Inline;
 }
 
-export type TypeTravailsOfRevertes =
-  Contentful.Entry<TypeTravailsOfRevertesFields>;
+export type TypeTravailsOfRevertes = Contentful.Entry<TypeTravailsOfRevertesFields>;

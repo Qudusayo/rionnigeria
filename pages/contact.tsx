@@ -29,11 +29,7 @@ export default function Contact() {
   return (
     <PageSeo title="Contact Us">
       <div className={styles.Contact}>
-        <CommonHero
-          title="Contact Us"
-          info="Get in touch with us"
-          bg="/bg/contact-bg.webp"
-        />
+        <CommonHero title="Contact Us" info="Get in touch with us" bg="/bg/contact-bg.webp" />
         <div className={styles.ContactContent}>
           <div className={styles.ContactContentInfo}>
             <h2>Risalatul Islamiyyat Organization of Nigeria</h2>
@@ -120,19 +116,11 @@ function FormEntry() {
   return (
     <>
       <Alert hideAlert={!showSuccessAlert} />
-      <form
-        className={styles.ContactContentForm}
-        onSubmit={formik.handleSubmit}
-      >
+      <form className={styles.ContactContentForm} onSubmit={formik.handleSubmit}>
         <h2>Send us a Message</h2>
         <div>
           <label htmlFor="name">Your Name</label>
-          <input
-            id="name"
-            name="name"
-            onChange={formik.handleChange}
-            value={formik.values.name}
-          />
+          <input id="name" name="name" onChange={formik.handleChange} value={formik.values.name} />
         </div>
         <div>
           <label htmlFor="email">Email Address</label>
@@ -150,21 +138,11 @@ function FormEntry() {
         </div>
         <div>
           <label htmlFor="phoneNumber">Phone Number</label>
-          <input
-            id="phoneNumber"
-            name="phoneNumber"
-            onChange={formik.handleChange}
-            value={formik.values.phoneNumber}
-          />
+          <input id="phoneNumber" name="phoneNumber" onChange={formik.handleChange} value={formik.values.phoneNumber} />
         </div>
         <div>
           <label htmlFor="subject">Subject</label>
-          <input
-            id="subject"
-            name="subject"
-            onChange={formik.handleChange}
-            value={formik.values.subject}
-          />
+          <input id="subject" name="subject" onChange={formik.handleChange} value={formik.values.subject} />
         </div>
         <div>
           <label htmlFor="message">Message</label>
@@ -190,12 +168,7 @@ function FormEntry() {
 
 function Alert({ hideAlert = true }) {
   return (
-    <div
-      className={[
-        styles.Alert,
-        hideAlert ? styles.AlertHidden : styles.AlertVisible,
-      ].join(" ")}
-    >
+    <div className={[styles.Alert, hideAlert ? styles.AlertHidden : styles.AlertVisible].join(" ")}>
       Message sent successfully
     </div>
   );

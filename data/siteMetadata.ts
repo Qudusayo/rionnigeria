@@ -7,6 +7,6 @@ const siteMetadata = {
   twitter: "https://twitter.com/rionnigeria",
   twitterHandle: "@rionnigeria",
   facebook: "https://web.facebook.com/rionnigeriahq",
-}
+};
 
-export default siteMetadata
+export default siteMetadata;

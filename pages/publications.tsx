@@ -20,12 +20,8 @@ export default function Publications() {
     <PageSeo title="Publications">
       <Component>
         <div className={styles.Publications}>
-          <h2 className={styles.PublicationsSectorMainTitle}>
-            Top Publications
-          </h2>
-          <p className={styles.PublicationsSectorInfo}>
-            Some of the best books for this week
-          </p>
+          <h2 className={styles.PublicationsSectorMainTitle}>Top Publications</h2>
+          <p className={styles.PublicationsSectorInfo}>Some of the best books for this week</p>
         </div>
         <div className="publicationsSwiperCard">
           <>
@@ -173,12 +169,7 @@ const BookDisplayCard = ({
   type?: "carousel" | "block";
 }) => {
   return (
-    <div
-      className={[
-        styles.BookDisplayCard,
-        type === "carousel" && styles.CarouselCard,
-      ].join(" ")}
-    >
+    <div className={[styles.BookDisplayCard, type === "carousel" && styles.CarouselCard].join(" ")}>
       <img src={image} alt={title} />
       <h2>{title}</h2>
       <p>{author}</p>

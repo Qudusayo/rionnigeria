@@ -1,21 +1,14 @@
 import { createClient } from "contentful";
 import BlogPost from "../../components/BlogPost/BlogPost";
 import Component from "../../layout/Component/Component";
-import {
-  TypeTravailsOfRevertes,
-  TypeTravailsOfRevertesFields,
-} from "../../types";
+import { TypeTravailsOfRevertes, TypeTravailsOfRevertesFields } from "../../types";
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
   accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
 });
 
-export default function TravailsSlug({
-  travail,
-}: {
-  travail: TypeTravailsOfRevertes;
-}) {
+export default function TravailsSlug({ travail }: { travail: TypeTravailsOfRevertes }) {
   if (!travail) return;
 
   const { post, author, publishedDate, title } = travail.fields;

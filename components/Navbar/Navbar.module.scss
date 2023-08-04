@@ -95,8 +95,7 @@
       padding: 1em 0;
       flex: auto;
       text-align: center;
-      background: linear-gradient(0deg, white, white) no-repeat right bottom / 0
-        var(--bg-h);
+      background: linear-gradient(0deg, white, white) no-repeat right bottom / 0 var(--bg-h);
       transition: background-size 350ms;
 
       &:where(:hover, :focus-visible) {
@@ -106,8 +105,7 @@
       --bg-h: 2px;
 
       &.activeNav {
-        background: linear-gradient(0deg, white, white) no-repeat right bottom /
-          0 var(--bg-h);
+        background: linear-gradient(0deg, white, white) no-repeat right bottom / 0 var(--bg-h);
         background-size: 100% var(--bg-h);
         background-position-x: left;
       }
@@ -163,8 +161,7 @@
         padding: 0;
         text-align: left;
         border-bottom: 1px solid #e6e6e6;
-        background: linear-gradient(0deg, #039341, #039341) no-repeat right
-          bottom / 0 var(--bg-h);
+        background: linear-gradient(0deg, #039341, #039341) no-repeat right bottom / 0 var(--bg-h);
         transition: background-size 350ms;
 
         &:nth-last-of-type(1) {

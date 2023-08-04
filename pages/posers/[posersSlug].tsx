@@ -14,13 +14,7 @@ export default function PosersSlug({ poser }: { poser: TypePoser }) {
   const { post, author, publishedDate, title } = poser.fields;
   return (
     <Component>
-      <BlogPost
-        post={post}
-        title={title}
-        author={author}
-        publishedDate={publishedDate}
-        sector="Posers"
-      />
+      <BlogPost post={post} title={title} author={author} publishedDate={publishedDate} sector="Posers" />
     </Component>
   );
 }

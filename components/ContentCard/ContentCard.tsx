@@ -1,5 +1,3 @@
 export default function ContentCard() {
-  return (
-    <div>ContentCard</div>
-  )
+  return <div>ContentCard</div>;
 }

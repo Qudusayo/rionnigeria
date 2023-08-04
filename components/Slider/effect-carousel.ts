@@ -12,8 +12,8 @@
  */
 
 export default function CarouselSlider({ swiper, on }) {
-  on('beforeInit', () => {
-    if (swiper.params.effect !== 'carousel') return;
+  on("beforeInit", () => {
+    if (swiper.params.effect !== "carousel") return;
     swiper.classNames.push(`${swiper.params.containerModifierClass}carousel`);
     const overwriteParams = {
       watchSlidesProgress: true,
@@ -23,8 +23,8 @@ export default function CarouselSlider({ swiper, on }) {
     Object.assign(swiper.params, overwriteParams);
     Object.assign(swiper.originalParams, overwriteParams);
   });
-  on('progress', () => {
-    if (swiper.params.effect !== 'carousel') return;
+  on("progress", () => {
+    if (swiper.params.effect !== "carousel") return;
     const scaleStep = 0.2;
     const zIndexMax = swiper.slides.length;
     for (let i = 0; i < swiper.slides.length; i += 1) {
@@ -35,9 +35,7 @@ export default function CarouselSlider({ swiper, on }) {
       if (absProgress > 1) {
         modify = (absProgress - 1) * 0.3 + 1;
       }
-      const opacityEls = slideEl.querySelectorAll(
-        '.swiper-carousel-animate-opacity',
-      );
+      const opacityEls = slideEl.querySelectorAll(".swiper-carousel-animate-opacity");
       const translate = `${slideProgress * modify * 50}%`;
       const scale = 1 - absProgress * scaleStep;
       const zIndex = zIndexMax - Math.abs(Math.round(slideProgress));
@@ -55,13 +53,11 @@ export default function CarouselSlider({ swiper, on }) {
     }
   });
 
-  on('setTransition', (s, duration) => {
-    if (swiper.params.effect !== 'carousel') return;
+  on("setTransition", (s, duration) => {
+    if (swiper.params.effect !== "carousel") return;
     for (let i = 0; i < swiper.slides.length; i += 1) {
       const slideEl = swiper.slides[i];
-      const opacityEls = slideEl.querySelectorAll(
-        '.swiper-carousel-animate-opacity',
-      );
+      const opacityEls = slideEl.querySelectorAll(".swiper-carousel-animate-opacity");
       slideEl.style.transitionDuration = `${duration}ms`;
       opacityEls.forEach((opacityEl) => {
         opacityEl.style.transitionDuration = `${duration}ms`;

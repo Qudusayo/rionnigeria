@@ -14,13 +14,7 @@ export default function RebutalsSlug({ rebuttal }: { rebuttal: TypeRebuttal }) {
   const { post, author, publishedDate, title } = rebuttal.fields;
   return (
     <Component>
-      <BlogPost
-        post={post}
-        title={title}
-        author={author}
-        publishedDate={publishedDate}
-        sector="Rebuttals"
-      />
+      <BlogPost post={post} title={title} author={author} publishedDate={publishedDate} sector="Rebuttals" />
     </Component>
   );
 }

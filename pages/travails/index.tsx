@@ -5,17 +5,10 @@ import GridLayout from "../../components/GridLayout/GridLayout";
 import Component from "../../layout/Component/Component";
 
 import styles from "./../../styles/travails.module.scss";
-import {
-  TypeTravailsOfRevertes,
-  TypeTravailsOfRevertesFields,
-} from "../../types";
+import { TypeTravailsOfRevertes, TypeTravailsOfRevertesFields } from "../../types";
 import PageSeo from "../../layout/PageSeo";
 
-export default function Travails({
-  travailsOfRevertes,
-}: {
-  travailsOfRevertes: TypeTravailsOfRevertes[];
-}) {
+export default function Travails({ travailsOfRevertes }: { travailsOfRevertes: TypeTravailsOfRevertes[] }) {
   return (
     <PageSeo title="Travails of Reverts">
       <Component>
@@ -23,25 +16,21 @@ export default function Travails({
         <p className={styles.TravailsSectorInfo}>
           It is reported in the Bukhariy hadith that the Prophet said:{" "}
           <b>
-            &ldquo;Every Child is born with a correct nature of Islamic
-            submission, but his parents later make him a Jew or a Christian or a
-            Magian.&rdquo;
+            &ldquo;Every Child is born with a correct nature of Islamic submission, but his parents later make him a Jew
+            or a Christian or a Magian.&rdquo;
           </b>{" "}
-          Many people born outside Islam as a result of parental and/or societal
-          factors have one way or the other retraced their steps back to their
-          natural faith, they have claimed back their birthright by reverting to
-          Islam and have been enjoying the best tranquillity of life with
-          unshakeable hope of salvation in the Hereafter. We bring to you from{" "}
+          Many people born outside Islam as a result of parental and/or societal factors have one way or the other
+          retraced their steps back to their natural faith, they have claimed back their birthright by reverting to
+          Islam and have been enjoying the best tranquillity of life with unshakeable hope of salvation in the
+          Hereafter. We bring to you from{" "}
           <b>
             <u>books/magazines, websites, and personal contacts</u>
           </b>
-          , the travails of some lucky and reasonable people who are not
-          tantalized with fake promises offered by custodians of empty faiths!
-          Your experience or those you know is highly welcome.
+          , the travails of some lucky and reasonable people who are not tantalized with fake promises offered by
+          custodians of empty faiths! Your experience or those you know is highly welcome.
           <br />
           <br />
-          Send to our e-mail address (info@rionnigeria.org), if possible with
-          full information/identities. Thanks!
+          Send to our e-mail address (info@rionnigeria.org), if possible with full information/identities. Thanks!
         </p>
         <div className={styles.TravailsSectorContent}>
           {/* <div className={styles.FlexImageColumn}>
@@ -85,14 +74,10 @@ export default function Travails({
               return (
                 <Card
                   key={travails.sys.id}
-                  imageUrl={
-                    "https:" + travails.fields.thumbnail.fields.file.url
-                  }
+                  imageUrl={"https:" + travails.fields.thumbnail.fields.file.url}
                   contentURL={"/travails/" + travails.fields.slug}
                   title={travails.fields.title}
-                  date={moment(travails.fields.publishedDate).format(
-                    "MMM DD, YYYY, HH:mm"
-                  )}
+                  date={moment(travails.fields.publishedDate).format("MMM DD, YYYY, HH:mm")}
                   className={styles.CardAbsolute}
                 />
               );
@@ -112,8 +97,7 @@ export async function getStaticProps() {
 
   const response = await client.getEntries<TypeTravailsOfRevertesFields>({
     content_type: "travailsOfRevertes",
-    select:
-      "sys.id,fields.slug,fields.thumbnail,fields.title,fields.publishedDate",
+    select: "sys.id,fields.slug,fields.thumbnail,fields.title,fields.publishedDate",
   });
 
   return {

@@ -12,13 +12,7 @@ import { useEffect, useState } from "react";
 import HeadSeo from "../HeadSeo/HeadSeo";
 import siteMetadata from "../../data/siteMetadata";
 
-export default function BlogPost({
-  post,
-  author,
-  publishedDate,
-  title,
-  sector,
-}) {
+export default function BlogPost({ post, author, publishedDate, title, sector }) {
   const router = useRouter();
   const [origin, setOrigin] = useState("");
 
@@ -28,10 +22,7 @@ export default function BlogPost({
 
   return (
     <>
-      <HeadSeo
-        title={`${siteMetadata.companyName} | ${title}`}
-        ogType={"article"}
-      >
+      <HeadSeo title={`${siteMetadata.companyName} | ${title}`} ogType={"article"}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -66,17 +57,13 @@ export default function BlogPost({
           <div className={styles.BlogPostHeaderShare}>
             <div className={styles.BlogPostHeaderShareInfo}>
               <h5>By {author.toLowerCase()}</h5>
-              <span className={styles.BlogPostHeaderDate}>
-                {moment(publishedDate).format("MMM DD, YYYY, HH:mm")}
-              </span>
+              <span className={styles.BlogPostHeaderDate}>{moment(publishedDate).format("MMM DD, YYYY, HH:mm")}</span>
             </div>
             <div className={styles.BlogPostHeaderSocialShare}>
               <span>Share via: </span>
               <span>
                 <a
-                  href={`https://www.facebook.com/sharer/sharer.php?u=${
-                    origin + router.asPath
-                  }`}
+                  href={`https://www.facebook.com/sharer/sharer.php?u=${origin + router.asPath}`}
                   rel="noreferrer"
                   target="_blank"
                 >
@@ -85,9 +72,7 @@ export default function BlogPost({
               </span>
               <span>
                 <a
-                  href={`http://twitter.com/share?text=${title}&url=${
-                    origin + router.asPath
-                  }`}
+                  href={`http://twitter.com/share?text=${title}&url=${origin + router.asPath}`}
                   rel="noreferrer"
                   target="_blank"
                 >
@@ -98,9 +83,7 @@ export default function BlogPost({
           </div>
         </div>
         <div className={styles.FlexImageColumn}>
-          <div className={styles.FlexImageColumnMain}>
-            {documentToReactComponents(post)}
-          </div>
+          <div className={styles.FlexImageColumnMain}>{documentToReactComponents(post)}</div>
           <div className={styles.FlexImageColumnSection}>
             <h2 className={styles.FlexImageColumnSectionTitle}>Recent News</h2>
             <Card
@@ -119,26 +102,10 @@ export default function BlogPost({
             />
             <h2 className={styles.FlexImageColumnSectionTitle}>More News</h2>
             <div className={styles.FlexLeftNoImgCardExtra}>
-              <Card
-                className={styles.rCard}
-                title="10 Places you can visit after your hajj"
-                date="Mon, 15th Aug."
-              />
-              <Card
-                className={styles.rCard}
-                title="10 Places you can visit after your hajj"
-                date="Mon, 15th Aug."
-              />
-              <Card
-                className={styles.rCard}
-                title="10 Places you can visit after your hajj"
-                date="Mon, 15th Aug."
-              />
-              <Card
-                className={styles.rCard}
-                title="10 Places you can visit after your hajj"
-                date="Mon, 15th Aug."
-              />
+              <Card className={styles.rCard} title="10 Places you can visit after your hajj" date="Mon, 15th Aug." />
+              <Card className={styles.rCard} title="10 Places you can visit after your hajj" date="Mon, 15th Aug." />
+              <Card className={styles.rCard} title="10 Places you can visit after your hajj" date="Mon, 15th Aug." />
+              <Card className={styles.rCard} title="10 Places you can visit after your hajj" date="Mon, 15th Aug." />
             </div>
           </div>
         </div>

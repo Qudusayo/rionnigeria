@@ -13,11 +13,7 @@ export default function PageSeo({
 }) {
   return (
     <>
-      <HeadSeo
-        title={`${siteMetadata.companyName} | ${title}`}
-        description={description}
-        ogType={"article"}
-      />
+      <HeadSeo title={`${siteMetadata.companyName} | ${title}`} description={description} ogType={"article"} />
       {children}
     </>
   );

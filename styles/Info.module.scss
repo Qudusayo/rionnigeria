@@ -70,19 +70,19 @@
     }
   }
 
-  @media screen and (max-width: 768px){
-    .ActivityCard{
+  @media screen and (max-width: 768px) {
+    .ActivityCard {
       width: 90%;
       top: -5em;
       padding: 2em;
       margin-bottom: -5em;
     }
 
-    &Content{
+    &Content {
       flex-direction: column;
     }
 
-    &Card{
+    &Card {
       width: 90%;
       padding: 2em;
     }
