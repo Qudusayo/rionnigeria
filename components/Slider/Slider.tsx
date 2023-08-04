@@ -42,11 +42,7 @@ export default function Slider() {
         init={true}
         onAfterInit={(swiper) => {
           setIsSwiperInitialized(true);
-          swiper.autoplay.start();
-          swiper.autoplay.run();
-          console.log("Swiper initialized!", swiper);
         }}
-        initialSlide={2}
         lazy={true}
       >
         <SwiperSlide>
