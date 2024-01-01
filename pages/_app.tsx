@@ -16,6 +16,7 @@ import "../styles/effect-carousel.scss";
 import "../styles/Nprogress.scss";
 import Head from "next/head";
 
+NProgress.configure({ showSpinner: false });
 // Router Events
 Router.events.on("routeChangeStart", () => NProgress.start());
 Router.events.on("routeChangeComplete", () => NProgress.done());
