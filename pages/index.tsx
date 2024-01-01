@@ -7,6 +7,7 @@ import { CardType } from "../types";
 import PageSeo from "../layout/PageSeo";
 import { createClient } from "contentful";
 import moment from "moment";
+import { Block, Inline } from '@contentful/rich-text-types';
 import { documentToPlainTextString } from "@contentful/rich-text-plain-text-renderer";
 
 interface iEntriesByType {
@@ -15,7 +16,7 @@ interface iEntriesByType {
       title: string;
       slug: string;
       publishedDate: string;
-      post: Document;
+      post: Block | Inline;
       summary: string;
       image: {
         fields: {
